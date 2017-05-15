@@ -1,2 +1,11 @@
-﻿body {
+﻿.body-div{
+    margin-top: 80px;
+}
+
+.navbar {
+    background-color: #594074;
+}
+
+.navbar a {
+    color: white;
 }
