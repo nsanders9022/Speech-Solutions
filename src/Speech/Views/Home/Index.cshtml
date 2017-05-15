@@ -6,3 +6,8 @@
 @using System.Security.Claims
 
 <h1>Welcome!</h1>
+
+@if (User.Identity.IsAuthenticated)
+{
+    <p>@User.Identity.Name</p>
+}
