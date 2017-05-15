@@ -18,6 +18,10 @@ namespace Speech.ViewModels
         public string Email { get; set; }
 
         [Required]
+        [Display(Name = "Phone Number")]
+        public string PhoneNumber { get; set; }
+
+        [Required]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }

@@ -216,6 +216,7 @@
 "C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170515175659_AddUserName.Designer.cs"
 "C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\SpeechDbContextModelSnapshot.cs"
 "C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Models\ApplicationUser.cs"
+"C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Models\Child.cs"
 "C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Models\SpeechDbContext.cs"
 "C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\ViewModels\LoginViewModel.cs"
 "C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\ViewModels\RegisterViewModel.cs"
