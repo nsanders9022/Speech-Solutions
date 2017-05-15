@@ -8,9 +8,10 @@ using Speech.Models;
 namespace Speech.Migrations
 {
     [DbContext(typeof(SpeechDbContext))]
-    partial class SpeechDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170515202357_UpdateUsers")]
+    partial class UpdateUsers
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")
@@ -133,8 +134,6 @@ namespace Speech.Migrations
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
-
-                    b.Property<DateTime>("DOB");
 
                     b.Property<string>("Email")
                         .HasAnnotation("MaxLength", 256);

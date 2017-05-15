@@ -220,6 +220,10 @@ C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170515175659_AddUs
 C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170515175659_AddUserName.Designer.cs
 C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170515185853_ClientTable.cs
 C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170515185853_ClientTable.Designer.cs
+C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170515202357_UpdateUsers.cs
+C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170515202357_UpdateUsers.Designer.cs
+C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170515202901_AddBirthday.cs
+C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170515202901_AddBirthday.Designer.cs
 C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\SpeechDbContextModelSnapshot.cs
 C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Models\ApplicationUser.cs
 C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Models\Client.cs
