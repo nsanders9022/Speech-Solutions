@@ -1,0 +1,27 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using Speech.Models
+@model Client
+
+<h2>Tell us about your child</h2>
+<hr />
+@using (Html.BeginForm("Client", "Account", FormMethod.Post))
+{
+    @Html.LabelFor(m => m.FirstName)
+    @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+
+    @Html.LabelFor(m => m.LastName)
+    @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+
+    @Html.LabelFor(m => m.DOB)
+   @Html.EditorFor(model => model.DOB, new { @type = "date" })
+
+    @Html.LabelFor(m => m.Comment)
+    @Html.TextAreaFor(m => m.Comment, new { @class = "form-control" })
+
+    <p>Password must contain at least one number, upper and lower case letters, and a special character. Passwords must be at least 6 characters long.</p>
+
+    <input type="submit" value="Register" class="btn btn-primary" />
+}
