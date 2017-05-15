@@ -2,10 +2,30 @@
     margin-top: 80px;
 }
 
+.navbar-brand
+{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin:0 auto;
+}
+.navbar-toggle {
+    z-index:3;
+}
+
 .navbar {
     background-color: #594074;
 }
 
 .navbar a {
     color: white;
+}
+
+.btn a {
+    color: white;
+}
+
+.btn {
+    margin-top: 10px;
 }

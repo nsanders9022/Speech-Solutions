@@ -65,7 +65,7 @@ namespace Speech.Controllers
             }
         }
 
-        [HttpPost]
+        [HttpGet]
         public async Task<IActionResult> LogOff()
         {
             await _signInManager.SignOutAsync();
