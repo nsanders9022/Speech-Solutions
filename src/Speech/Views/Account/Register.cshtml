@@ -36,8 +36,8 @@
     @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
 
     @Html.LabelFor(m => m.DOB)
-    @Html.EditorFor(model => model.DOB, new { @type = "date" })
-
+    @Html.EditorFor(model => model.DOB, new { @type = "date", @class = "form-control" })
+    <br/>
     @Html.LabelFor(m => m.Comment)
     @Html.TextAreaFor(m => m.Comment, new { @class = "form-control" })
 
