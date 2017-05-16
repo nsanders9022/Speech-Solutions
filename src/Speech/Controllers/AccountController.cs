@@ -34,7 +34,7 @@ namespace Speech.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
-            var user = new ApplicationUser { UserName = model.UserName, Email = model.Email, PhoneNumber = model.PhoneNumber, FirstName = model.FirstName, LastName = model.LastName, DOB = model.DOB, Comment = model.Comment };
+            var user = new ApplicationUser { UserName = model.UserName, Email = model.Email};
             IdentityResult result = await _userManager.CreateAsync(user, model.Password);
             if (result.Succeeded)
             {

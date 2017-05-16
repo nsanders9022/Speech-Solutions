@@ -2,11 +2,11 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@model Speech.Models.Client
+@model Speech.Models.Profile
 
 <h2>Create profile</h2>
 <hr />
-@using (Html.BeginForm("Create", "User", FormMethod.Post))
+@using (Html.BeginForm("Create", "Profile", FormMethod.Post))
 {
     <h3>Client information</h3>
         <hr />
@@ -25,5 +25,5 @@
 
     <p>Password must contain at least one number, upper and lower case letters, and a special character. Passwords must be at least 6 characters long.</p>
 
-    <input type="submit" value="Register" class="btn btn-info" />
+    <input type="submit" value="Submit" class="btn btn-info" />
 }

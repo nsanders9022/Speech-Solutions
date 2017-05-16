@@ -9,11 +9,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Speech.Models
 {
-    [Table("Clients")]
-    public class Client
+    [Table("Profiles")]
+    public class Profile
     {
         [Key]
-        public int ClientId { get; set; }
+        public int ProfileId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime DOB { get; set; }
