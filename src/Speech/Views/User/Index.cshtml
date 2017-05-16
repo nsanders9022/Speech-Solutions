@@ -3,3 +3,10 @@
 }
 
 @using System.Security.Claims
+@model Speech.Models.ApplicationUser
+
+@if (User.Identity.IsAuthenticated)
+{
+    <p>@Html.DisplayNameFor(model => model.UserName)</p>
+    
+}
