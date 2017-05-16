@@ -15,11 +15,11 @@
 }
 
 .navbar {
-    background-color: #594074;
+    background-color: #a69afe;
 }
 
-.navbar a {
-    color: white;
+.nav-link > *, .navbar-brand {
+    color: white !important;
 }
 
 .btn a {
@@ -39,3 +39,27 @@
   }
 
 /*width="460" height="345"*/
+
+.home-body {
+    padding-top: 3%;
+    height: 200px;
+    text-align: center;
+}
+
+h1 {
+    color: #74c0cd;
+    font-weight: bold;
+}
+
+.reviews {
+    background-color: #bee4e7;
+    height: 200px;
+    padding-top: 50px;
+
+}
+
+/*green #0d512a
+light blue #bee4e7
+light green #bee4e7
+lilac #a69afe
+dark blu #2f2989*/

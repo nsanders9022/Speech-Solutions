@@ -27,20 +27,20 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li>
+                    <li class="nav-link">
                         @Html.ActionLink("About", "About", "Home")
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     @if (User.Identity.IsAuthenticated)
                     {
-                        <li>
+                        <li class="nav-link">
                             @Html.ActionLink("Log Out", "LogOff", "Account")
                         </li>
                     }
                     else
                     {
-                        <li>
+                        <li class="nav-link">
                             @Html.ActionLink("Login/Signup", "Index", "Account")
                         </li>
                     }

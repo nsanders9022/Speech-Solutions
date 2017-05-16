@@ -5,7 +5,7 @@
 @using System.Security.Claims
 
 
-<div class="container">
+<div>
     <br>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -56,11 +56,18 @@
     </div>
 </div>
 
+<div class="home-body container">
+    <h1>Speech Solutions</h1>
+    <p>Speech Solutions is your first and only stop for online speech therapy needs. Our therapist, Dayna Sanders, provides exceptional one-on-one attention to help all clients reach their speech goals. Because everything is conducted online, travel and accessability are no longer issues. </p>
+</div>
+
+<div class="reviews">
+    <h3>Sally</h3>
+    <p>Great Great Great Great Great Great Great Great Great Great Great Great Great Great Great Great </p>
+</div>
 
 
-
-
-@if (User.Identity.IsAuthenticated)
+@*@if (User.Identity.IsAuthenticated)
 {
     <p>@User.Identity.Name</p>
-}
+}*@
