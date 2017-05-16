@@ -211,6 +211,8 @@
 "C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170516222426_ProfilesTable.Designer.cs"
 "C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170516222729_BuildTables.cs"
 "C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170516222729_BuildTables.Designer.cs"
+"C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170516223944_AddUserNameToProfile.cs"
+"C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170516223944_AddUserNameToProfile.Designer.cs"
 "C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\SpeechDbContextModelSnapshot.cs"
 "C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Models\ApplicationUser.cs"
 "C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Models\Profile.cs"

@@ -8,9 +8,10 @@ using Speech.Models;
 namespace Speech.Migrations
 {
     [DbContext(typeof(SpeechDbContext))]
-    partial class SpeechDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170516223944_AddUserNameToProfile")]
+    partial class AddUserNameToProfile
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")
