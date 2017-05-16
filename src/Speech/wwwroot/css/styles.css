@@ -14,12 +14,21 @@
     z-index:3;
 }
 
-.navbar {
+.top-navbar {
     background-color: #a69afe;
 }
 
 .nav-link > *, .navbar-brand {
     color: white !important;
+}
+
+.bottom-navbar {
+    background-color:  #bee4e7;
+    margin-top: 50px;
+    border: none;
+    color: black;
+    /*position: fixed;*/
+    
 }
 
 .btn a {
