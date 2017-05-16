@@ -41,8 +41,10 @@
 /*width="460" height="345"*/
 
 .home-body {
-    padding-top: 3%;
+    padding-top: 2%;
+    padding-bottom: 2%;
     height: 200px;
+    width: 70%;
     text-align: center;
 }
 
@@ -52,14 +54,27 @@ h1 {
 }
 
 .reviews {
-    background-color: #bee4e7;
-    height: 200px;
-    padding-top: 50px;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: #74c0cd;
+    height: 300px;
+    margin: 0 auto;
+}
 
+.review-div {
+    width: 80%;
+}
+
+.review-list {
+    border: 2px solid  #2f2989; 
+    border-radius: 10%;
+    height: 180px;
+    width: 300px;
+    margin: 1%;
 }
 
 /*green #0d512a
-light blue #bee4e7
+light blue #74c0cd
 light green #bee4e7
 lilac #a69afe
 dark blu #2f2989*/

@@ -62,12 +62,17 @@
     <p>Speech Solutions is your first and only stop for online speech therapy needs. Our therapist, Dayna Sanders, provides exceptional one-on-one attention to help all clients reach their speech goals. Because everything is conducted online, travel and accessability are no longer issues. </p>
 </div>
 
-<div class="reviews">
-    @foreach(var review in Model)
-    {   
-        <p>@review.Name</p>
-        <p>@review.Description</p>
-    }
+<div class="reviews row">
+    <div class="review-div container">
+        @foreach (var review in Model)
+        {
+            <div class="review-list col-xs-4">
+                <h4>@review.Name</h4>
+                <p>@review.Description</p>
+            </div>
+        }
+    </div>
+
 </div>
 
 
