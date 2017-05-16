@@ -1,18 +1,31 @@
 ﻿$(document).ready(function () {
-    //$('.carousel').carousel({
-    //    interval: 2000
-    //})
+    console.log("scripts working");
+    $("#DemoCarousel").carousel();
 
-    // Activate Carousel
-    $("#myCarousel").carousel();
-
-    // Enable Carousel Indicators
-    $(".item").click(function () {
-        $("#myCarousel").carousel(1);
+    //Carousel Actions
+    $(".start").click(function () {
+        $("#DemoCarousel").carousel('cycle');
+    });
+    $(".pause").click(function () {
+        $("#DemoCarousel").carousel('pause');
     });
 
-    // Enable Carousel Controls
-    $(".left").click(function () {
-        $("#myCarousel").carousel("prev");
+    //Carousel Controls
+    $(".prevSlide").click(function () {
+        $("#DemoCarousel").carousel('prev');
+    });
+    $(".nextSlide").click(function () {
+        $("#DemoCarousel").carousel('next');
+    });
+
+    //Carousel Indicators
+    $(".slide-1").click(function () {
+        $("#DemoCarousel").carousel(0);
+    });
+    $(".slide-2").click(function () {
+        $("#DemoCarousel").carousel(1);
+    });
+    $(".slide-3").click(function () {
+        $("#DemoCarousel").carousel(2);
     });
 });
