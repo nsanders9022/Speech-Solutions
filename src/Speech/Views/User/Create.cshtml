@@ -1,0 +1,29 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model Speech.Models.Client
+
+<h2>Create profile</h2>
+<hr />
+@using (Html.BeginForm("Create", "User", FormMethod.Post))
+{
+    <h3>Client information</h3>
+        <hr />
+        @Html.LabelFor(m => m.FirstName)
+        @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+
+        @Html.LabelFor(m => m.LastName)
+        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+
+        @Html.LabelFor(m => m.DOB)
+        <br />
+        @Html.EditorFor(model => model.DOB, new { @type = "date", @class = "form-control" })
+        <br/>
+        @Html.LabelFor(m => m.Comment)
+        @Html.TextAreaFor(m => m.Comment, new { @class = "form-control" })
+
+    <p>Password must contain at least one number, upper and lower case letters, and a special character. Passwords must be at least 6 characters long.</p>
+
+    <input type="submit" value="Register" class="btn btn-info" />
+}

@@ -14,6 +14,7 @@ namespace Speech.Models
         }
 
         public DbSet<Review> Reviews { get; set; }
+        public DbSet<Client> Clients { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {

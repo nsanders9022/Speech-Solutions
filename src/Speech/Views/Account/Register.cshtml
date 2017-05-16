@@ -28,7 +28,7 @@
     @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
 
 
-    <h3>Client information</h3>
+    @*<h3>Client information</h3>
     <hr />
     @Html.LabelFor(m => m.FirstName)
     @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
@@ -41,7 +41,7 @@
     @Html.EditorFor(model => model.DOB, new { @type = "date", @class = "form-control" })
     <br/>
     @Html.LabelFor(m => m.Comment)
-    @Html.TextAreaFor(m => m.Comment, new { @class = "form-control" })
+    @Html.TextAreaFor(m => m.Comment, new { @class = "form-control" })*@
 
     <p>Password must contain at least one number, upper and lower case letters, and a special character. Passwords must be at least 6 characters long.</p>
 
