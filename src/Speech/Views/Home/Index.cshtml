@@ -3,6 +3,7 @@
 }
 
 @using System.Security.Claims
+@model IEnumerable<Speech.Models.Review>
 
 
 <div>
@@ -62,8 +63,11 @@
 </div>
 
 <div class="reviews">
-    <h3>Sally</h3>
-    <p>Great Great Great Great Great Great Great Great Great Great Great Great Great Great Great Great </p>
+    @foreach(var review in Model)
+    {   
+        <p>@review.Name</p>
+        <p>@review.Description</p>
+    }
 </div>
 
 

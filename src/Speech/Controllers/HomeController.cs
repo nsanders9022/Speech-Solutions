@@ -15,7 +15,7 @@ namespace Speech.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(db.Reviews.ToList());
         }
 
         public IActionResult About()

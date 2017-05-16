@@ -13,6 +13,8 @@ namespace Speech.Models
         {
         }
 
+        public DbSet<Review> Reviews { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Speech;integrated security=True");

@@ -8,8 +8,8 @@ using Speech.Models;
 namespace Speech.Migrations
 {
     [DbContext(typeof(SpeechDbContext))]
-    [Migration("20170515202357_UpdateUsers")]
-    partial class UpdateUsers
+    [Migration("20170516201401_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -135,6 +135,8 @@ namespace Speech.Migrations
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
 
+                    b.Property<DateTime>("DOB");
+
                     b.Property<string>("Email")
                         .HasAnnotation("MaxLength", 256);
 
@@ -177,6 +179,20 @@ namespace Speech.Migrations
                         .HasName("UserNameIndex");
 
                     b.ToTable("AspNetUsers");
+                });
+
+            modelBuilder.Entity("Speech.Models.Review", b =>
+                {
+                    b.Property<int>("ReviewId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Description");
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("ReviewId");
+
+                    b.ToTable("Reviews");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRoleClaim<string>", b =>
