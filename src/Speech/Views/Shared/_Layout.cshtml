@@ -40,9 +40,12 @@
                     }
                     else
                     {
-                        <li class="nav-link">
+                        @*<li class="nav-link">
                             @Html.ActionLink("Login/Signup", "Index", "Account")
-                        </li>
+                        </li>*@
+
+                        <li class="nav-link">@Html.ActionLink("Register", "Register", "Account")</li>
+                        <li class="nav-link">@Html.ActionLink("Login","Login","Account")</li>
                     }
                 </ul>
             </div>
