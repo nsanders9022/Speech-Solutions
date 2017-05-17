@@ -12,8 +12,8 @@ namespace Speech.Controllers
         private SpeechDbContext db = new SpeechDbContext();
         public IActionResult Index(string userName)
         {
-            var thisUser = db.Users.FirstOrDefault(users => users.UserName == userName);
-            return View(userName);
+            var thisUser = db.Profiles.FirstOrDefault(profiles => profiles.UserName == userName);
+            return View(thisUser);
         }
 
         //public IActionResult Create( int id)
