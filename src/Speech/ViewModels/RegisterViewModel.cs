@@ -39,11 +39,30 @@ namespace Speech.ViewModels
         public string LastName { get; set; }
 
         [Display(Name = "Date of Birth")]
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime DOB { get; set; }
 
-        [Display(Name = "Comment")]
+        [Display(Name = "Comments")]
         public string Comment { get; set; }
+
+        [Display(Name = "Client First Name")]
+        public string ClientFirst { get; set; }
+
+        [Display(Name = "Client Last Name")]
+        public string ClientLast { get; set; }
+
+
+        //[Display(Name = "First Name")]
+        //public string FirstName { get; set; }
+
+        //[Display(Name = "Last Name")]
+        //public string LastName { get; set; }
+
+        //[Display(Name = "Date of Birth")]
+        //[DataType(DataType.Date)]
+        //[DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        //public DateTime DOB { get; set; }
+
+        //[Display(Name = "Comment")]
+        //public string Comment { get; set; }
     }
 }

@@ -8,9 +8,10 @@ using Speech.Models;
 namespace Speech.Migrations
 {
     [DbContext(typeof(SpeechDbContext))]
-    partial class SpeechDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170516222729_BuildTables")]
+    partial class BuildTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")
@@ -177,12 +178,6 @@ namespace Speech.Migrations
                     b.Property<int>("ProfileId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("ApplicationUserId");
-
-                    b.Property<string>("ClientFirst");
-
-                    b.Property<string>("ClientLast");
-
                     b.Property<string>("Comment");
 
                     b.Property<DateTime>("DOB");
@@ -191,12 +186,7 @@ namespace Speech.Migrations
 
                     b.Property<string>("LastName");
 
-                    b.Property<string>("UserName");
-
                     b.HasKey("ProfileId");
-
-                    b.HasIndex("ApplicationUserId")
-                        .IsUnique();
 
                     b.ToTable("Profiles");
                 });
@@ -250,13 +240,6 @@ namespace Speech.Migrations
                         .WithMany("Roles")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("Speech.Models.Profile", b =>
-                {
-                    b.HasOne("Speech.Models.ApplicationUser", "ApplicationUser")
-                        .WithOne("Profile")
-                        .HasForeignKey("Speech.Models.Profile", "ApplicationUserId");
                 });
         }
     }

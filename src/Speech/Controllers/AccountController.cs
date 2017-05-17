@@ -34,11 +34,14 @@ namespace Speech.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
-            var user = new ApplicationUser { UserName = model.UserName, Email = model.Email, PhoneNumber = model.PhoneNumber, FirstName = model.FirstName, LastName = model.LastName, DOB = model.DOB, Comment = model.Comment };
+            var user = new ApplicationUser { UserName = model.UserName, Email = model.Email};
             IdentityResult result = await _userManager.CreateAsync(user, model.Password);
             if (result.Succeeded)
             {
-                return RedirectToAction("Index");
+                Profile profile = new Profile { ApplicationUserId = user.Id, FirstName = model.FirstName, LastName = model.LastName, UserName = model.UserName, DOB = model.DOB, Comment = model.Comment, ClientFirst = model.ClientFirst, ClientLast = model.ClientLast };
+                _db.Profiles.Add(profile);
+                _db.SaveChanges();
+                return RedirectToAction("Login","Account");
             }
             else
             {

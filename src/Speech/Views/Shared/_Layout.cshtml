@@ -40,16 +40,19 @@
                     }
                     else
                     {
-                        <li class="nav-link">
+                        @*<li class="nav-link">
                             @Html.ActionLink("Login/Signup", "Index", "Account")
-                        </li>
+                        </li>*@
+
+                        <li class="nav-link">@Html.ActionLink("Register", "Register", "Account")</li>
+                        <li class="nav-link">@Html.ActionLink("Login","Login","Account")</li>
                     }
                 </ul>
             </div>
         </div>
     </nav>
 
-    <nav class="navbar navbar-inverse bottom-navbar" role="navigation">
+     <nav class="navbar navbar-inverse bottom-navbar" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -69,59 +72,13 @@
                     @if (User.Identity.IsAuthenticated)
                     {
                         <li class="nav-link">
-                            @Html.ActionLink("View Account Information", "Index", "User")
+                            @Html.ActionLink("View Account Information", "Index", "Profile", new { userName = User.Identity.Name })
                         </li>
                     }
                 </ul>
             </div>
         </div>
     </nav>
-
-    
-    
-    
-    
-    
-    
-    
-    
-           
-            
-        
-        @*<div class="navbar2">
-            <div class="container">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        @Html.ActionLink("About Us", "About", "Home")
-                    </li>
-                    @*<li>
-                @Html.ActionLink("Hire Us", "Index", "Jobs")
-            </li>
-                    @if (User.Identity.IsAuthenticated)
-                    {
-                        <li>
-                            @Html.ActionLink("View Account Information", "Index", "Client")
-                        </li>
-                            <li>
-                                @Html.ActionLink("Log Out", "LogOff", "Account")
-                            </li>
-                            <li>
-                                <p id="nav-name">Welcome @User.Identity.Name</p>
-                            </li>
-                    }
-                    else
-                    {
-                        <li>
-                            @Html.ActionLink("Login/Signup", "Index", "Account")
-                        </li>
-                    }
-
-                </ul>
-
-            </div>
-        </div>*@
-   
-
     <div class="body-div">
         @RenderBody()
     </div>
