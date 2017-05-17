@@ -11,6 +11,8 @@
 @using (Html.BeginForm())
 {
     @Html.HiddenFor(model => model.ProfileId)
+    @Html.HiddenFor(model => model.UserName)
+
 
     <label>First Name</label>
     @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
@@ -34,4 +36,4 @@
 }
 
 <br />
-<p>@Html.ActionLink("Back to profile information", "Index", new { userName = User.Identity.Name })</p>
+<p>@Html.ActionLink("Back to profile information", "Index", new { userName = User.Identity.Name }, new { id = Model.ProfileId })</p>

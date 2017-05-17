@@ -14,6 +14,7 @@ namespace Speech.Controllers
         public IActionResult Index(string userName)
         {
             var thisUser = db.Profiles.FirstOrDefault(profiles => profiles.UserName == userName);
+            Console.WriteLine("user name " + thisUser.UserName);
             return View(thisUser);
         }
 
@@ -24,11 +25,14 @@ namespace Speech.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit(Profile profile)
+        public IActionResult Edit(Profile profile, string userName)
         {
             db.Entry(profile).State = EntityState.Modified;
+            var thisUser = db.Profiles.FirstOrDefault(profiles => profiles.UserName == userName);
+
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", new { userName = thisUser.UserName });
+            
         }
     }
 }
