@@ -6,9 +6,40 @@
 
 @model Speech.Models.Profile
 
-@if (User.Identity.IsAuthenticated)
-{
-    <h3>Your Profile Information</h3>
-    <p>@Html.DisplayFor(model => model.FirstName)</p>
-    
-}
+
+<div class="container">
+    @if (User.Identity.IsAuthenticated)
+    {
+        <h3>Your Profile Information</h3>
+        <table>
+            <tr>
+                <td class="property">First Name:</td>
+                <td>@Html.DisplayFor(model => model.FirstName)</td>
+            </tr>
+            <tr>
+                <td class="property">Last Name:</td>
+                <td>@Html.DisplayFor(model => model.LastName)</td>
+            </tr>
+            <tr>
+                <td class="property">User Name:</td>
+                <td>@Html.DisplayFor(model => model.UserName)</td>
+            </tr>
+            <tr>
+                <td class="property">Client First Name:</td>
+                <td>@Html.DisplayFor(model => model.ClientFirst)</td>
+            </tr>
+            <tr>
+                <td class="property">Client Last Name:</td>
+                <td>@Html.DisplayFor(model => model.ClientLast)</td>
+            </tr>
+            <tr>
+                <td class="property">Client Date of Birth:</td>
+                <td>@Html.DisplayFor(model => model.DOB)</td>
+            </tr>
+            <tr>
+                <td class="property">Comments:</td>
+                <td>@Html.DisplayFor(model => model.Comment)</td>
+            </tr>
+        </table>
+    }
+</div>
