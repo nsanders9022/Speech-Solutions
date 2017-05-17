@@ -11,7 +11,7 @@
 @using (Html.BeginForm("Register", "Account", FormMethod.Post))
 {
     <h3>Account holder information</h3>
-    <hr />
+   
     @Html.LabelFor(m => m.FirstName)
     @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
 
@@ -32,6 +32,22 @@
 
     @Html.LabelFor(m => m.ConfirmPassword)
     @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+
+    <hr />
+    <h3>Client Information</h3>
+
+    @Html.LabelFor(m => m.ClientFirst)
+    @Html.TextBoxFor(m => m.ClientFirst, new { @class = "form-control" })
+
+    @Html.LabelFor(m => m.ClientLast)
+    @Html.TextBoxFor(m => m.ClientLast, new { @class = "form-control" })
+
+    @Html.LabelFor(m => m.DOB)
+    <br />
+    @Html.EditorFor(model => model.DOB, new { @type = "date", @class = "form-control" })
+    <br />
+    @Html.LabelFor(m => m.Comment)
+    @Html.TextAreaFor(m => m.Comment, new { @class = "form-control" })
 
 
     @*<h3>Client information</h3>

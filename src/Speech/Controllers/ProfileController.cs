@@ -16,17 +16,18 @@ namespace Speech.Controllers
             return View(userName);
         }
 
-        public IActionResult Create()
-        {
-            return View();
-        }
+        //public IActionResult Create( int id)
+        //{
+        //    var thisProfile = db.Profiles.FirstOrDefault(profile => profile.ProfileId == id);
+        //    return View(thisProfile);
+        //}
 
-        [HttpPost]
-        public IActionResult Create(Profile profile)
-        {
-            db.Profiles.Add(profile);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
+        //[HttpPost]
+        //public IActionResult Create(Profile profile)
+        //{
+        //    db.Profiles.Add(profile);
+        //    db.SaveChanges();
+        //    return RedirectToAction("Index", "Home");
+        //}
     }
 }

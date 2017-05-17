@@ -8,12 +8,6 @@ namespace Speech.ViewModels
 {
     public class RegisterViewModel
     {
-        [Display(Name = "First Name")]
-        public string FirstName { get; set; }
-
-        [Display(Name = "Last Name")]
-        public string LastName { get; set; }
-
         [Required]
         [Display(Name = "User Name")]
         public string UserName { get; set; }
@@ -36,6 +30,25 @@ namespace Speech.ViewModels
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+
+        [Display(Name = "First Name")]
+        public string FirstName { get; set; }
+
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
+
+        [Display(Name = "Date of Birth")]
+        public DateTime DOB { get; set; }
+
+        [Display(Name = "Comments")]
+        public string Comment { get; set; }
+
+        [Display(Name = "Client First Name")]
+        public string ClientFirst { get; set; }
+
+        [Display(Name = "Client Last Name")]
+        public string ClientLast { get; set; }
 
 
         //[Display(Name = "First Name")]

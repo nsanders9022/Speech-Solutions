@@ -19,6 +19,8 @@ namespace Speech.Models
         public DateTime DOB { get; set; }
         public string Comment { get; set; }
         public string UserName { get; set; }
+        public string ClientFirst { get; set; }
+        public string ClientLast { get; set; }
         public string ApplicationUserId { get; set; }
         public virtual ApplicationUser ApplicationUser { get; set; }
     }
