@@ -12,6 +12,12 @@
 {
     <h3>Account holder information</h3>
     <hr />
+    @Html.LabelFor(m => m.FirstName)
+    @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+
+    @Html.LabelFor(m => m.LastName)
+    @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+
     @Html.LabelFor(m => m.UserName)
     @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
 

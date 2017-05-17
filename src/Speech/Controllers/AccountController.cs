@@ -38,6 +38,9 @@ namespace Speech.Controllers
             IdentityResult result = await _userManager.CreateAsync(user, model.Password);
             if (result.Succeeded)
             {
+                Profile profile = new Profile { ApplicationUserId = user.Id, FirstName = model.FirstName, LastName = model.LastName };
+                _db.Profiles.Add(profile);
+                _db.SaveChanges();
                 return RedirectToAction("Index");
             }
             else
