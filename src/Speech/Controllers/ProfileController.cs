@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Speech.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Speech.Controllers
 {
@@ -16,18 +17,18 @@ namespace Speech.Controllers
             return View(thisUser);
         }
 
-        //public IActionResult Create( int id)
-        //{
-        //    var thisProfile = db.Profiles.FirstOrDefault(profile => profile.ProfileId == id);
-        //    return View(thisProfile);
-        //}
+        public IActionResult Edit(string userName)
+        {
+            var thisProfile = db.Profiles.FirstOrDefault(profiles => profiles.UserName == userName);
+            return View(thisProfile);
+        }
 
-        //[HttpPost]
-        //public IActionResult Create(Profile profile)
-        //{
-        //    db.Profiles.Add(profile);
-        //    db.SaveChanges();
-        //    return RedirectToAction("Index", "Home");
-        //}
+        [HttpPost]
+        public IActionResult Edit(Profile profile)
+        {
+            db.Entry(profile).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

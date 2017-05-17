@@ -11,6 +11,7 @@
     @if (User.Identity.IsAuthenticated)
     {
         <h3>Your Profile Information</h3>
+        <hr />
         <table>
             <tr>
                 <td class="property">First Name:</td>
@@ -43,3 +44,5 @@
         </table>
     }
 </div>
+
+<button class="btn btn-info">@Html.ActionLink("Edit your profile information","Edit", new { userName = User.Identity.Name })</button>
