@@ -5,7 +5,7 @@
 @model Speech.Models.Profile
 
 <div class="container user-form">
-    <h1>Edit Your profile information</h1>
+    <h1>Edit Profile Information</h1>
     <hr />
 
     @using (Html.BeginForm())
@@ -32,7 +32,7 @@
         <label>Client Last Name</label>
         @Html.EditorFor(model => model.ClientLast, new { htmlAttributes = new { @class = "form-control" } })
         <br />
-        <input type="submit" class="btn btn-success" value="Save" />
+        <input type="submit" class="btn btn-info" value="Save" />
     }
 
     <br />
