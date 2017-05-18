@@ -56,6 +56,8 @@ namespace Speech
 
         public static void AddTestData(SpeechDbContext context1)
         {
+            context1.Database.ExecuteSqlCommand("Delete From Reviews");
+
             var content1 = new Models.Review
             {
                 Name = "Rachel",

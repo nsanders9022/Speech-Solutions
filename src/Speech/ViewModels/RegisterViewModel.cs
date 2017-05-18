@@ -31,13 +31,14 @@ namespace Speech.ViewModels
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
 
-
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
 
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         [Display(Name = "Date of Birth")]
         public DateTime DOB { get; set; }
 
@@ -49,20 +50,5 @@ namespace Speech.ViewModels
 
         [Display(Name = "Client Last Name")]
         public string ClientLast { get; set; }
-
-
-        //[Display(Name = "First Name")]
-        //public string FirstName { get; set; }
-
-        //[Display(Name = "Last Name")]
-        //public string LastName { get; set; }
-
-        //[Display(Name = "Date of Birth")]
-        //[DataType(DataType.Date)]
-        //[DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        //public DateTime DOB { get; set; }
-
-        //[Display(Name = "Comment")]
-        //public string Comment { get; set; }
-    }
+   }
 }

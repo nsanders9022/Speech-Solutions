@@ -42,7 +42,7 @@
 /*carosel*/
 .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
-      width: 100%;
+      width: 90%;
       height: 500px;
       margin: auto;
   }
@@ -70,7 +70,7 @@ h3 {
     padding-left: 10%;
     padding-right: 10%;
     background-color: #74c0cd;
-    height: 300px;
+    height: 500px;
     margin: 0 auto;
 }
 
@@ -107,6 +107,10 @@ td {
 
 tr:nth-child(odd) {
     background-color: #f2f2f2;
+}
+
+#edit-button {
+
 }
 
 

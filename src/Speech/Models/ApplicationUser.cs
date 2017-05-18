@@ -9,11 +9,6 @@ namespace Speech.Models
 {
     public class ApplicationUser : IdentityUser
     {
-        //public string FirstName { get; set; }
-        //public string LastName { get; set; }
-        //public DateTime DOB { get; set; }
-        //public string Comment { get; set; }
-
         public Profile Profile { get; set; }
     }
 }
