@@ -6,66 +6,53 @@
 
 @model RegisterViewModel
 
-<h2>Register a new user</h2>
-<hr />
-@using (Html.BeginForm("Register", "Account", FormMethod.Post))
-{
-    <h3>Account holder information</h3>
-   
-    @Html.LabelFor(m => m.FirstName)
-    @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
-
-    @Html.LabelFor(m => m.LastName)
-    @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
-
-    @Html.LabelFor(m => m.UserName)
-    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
-
-    @Html.LabelFor(m => m.Email)
-    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-
-    @Html.LabelFor(m => m.PhoneNumber)
-    @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control" })
-
-    @Html.LabelFor(m => m.Password)
-    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-
-    @Html.LabelFor(m => m.ConfirmPassword)
-    @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
-
+<div class="container user-form">
+    <h2>Register a new user</h2>
     <hr />
-    <h3>Client Information</h3>
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+    {
+        <h3>Account holder information</h3>
 
-    @Html.LabelFor(m => m.ClientFirst)
-    @Html.TextBoxFor(m => m.ClientFirst, new { @class = "form-control" })
+        @Html.LabelFor(m => m.FirstName)
+        @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
 
-    @Html.LabelFor(m => m.ClientLast)
-    @Html.TextBoxFor(m => m.ClientLast, new { @class = "form-control" })
+        @Html.LabelFor(m => m.LastName)
+        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
 
-    @Html.LabelFor(m => m.DOB)
-    <br />
-    @Html.EditorFor(model => model.DOB, new { @type = "date", @class = "form-control" })
-    <br />
-    @Html.LabelFor(m => m.Comment)
-    @Html.TextAreaFor(m => m.Comment, new { @class = "form-control" })
+        @Html.LabelFor(m => m.UserName)
+        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
 
+        @Html.LabelFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
 
-    @*<h3>Client information</h3>
-    <hr />
-    @Html.LabelFor(m => m.FirstName)
-    @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+        @Html.LabelFor(m => m.PhoneNumber)
+        @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control" })
 
-    @Html.LabelFor(m => m.LastName)
-    @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+        @Html.LabelFor(m => m.Password)
+        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
 
-    @Html.LabelFor(m => m.DOB)
-    <br />
-    @Html.EditorFor(model => model.DOB, new { @type = "date", @class = "form-control" })
-    <br/>
-    @Html.LabelFor(m => m.Comment)
-    @Html.TextAreaFor(m => m.Comment, new { @class = "form-control" })*@
+        @Html.LabelFor(m => m.ConfirmPassword)
+        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
 
-    <p>Password must contain at least one number, upper and lower case letters, and a special character. Passwords must be at least 6 characters long.</p>
+        <hr />
+        <h3>Client Information</h3>
 
-    <input type="submit" value="Register" class="btn btn-info" />
-}
+        @Html.LabelFor(m => m.ClientFirst)
+        @Html.TextBoxFor(m => m.ClientFirst, new { @class = "form-control" })
+
+        @Html.LabelFor(m => m.ClientLast)
+        @Html.TextBoxFor(m => m.ClientLast, new { @class = "form-control" })
+
+        @Html.LabelFor(m => m.DOB)
+        <br />
+        @Html.EditorFor(model => model.DOB, new { @type = "date", @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.Comment)
+        @Html.TextAreaFor(m => m.Comment, new { @class = "form-control" })
+
+        <p>*Password must contain at least one number, upper and lower case letters, and a special character. Passwords must be at least 6 characters long.</p>
+
+        <input type="submit" value="Register" class="btn btn-info" />
+    }
+
+ </div>
