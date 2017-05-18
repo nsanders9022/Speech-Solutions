@@ -208,6 +208,7 @@ C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Startup.cs
 C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Controllers\AccountController.cs
 C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Controllers\HomeController.cs
 C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Controllers\ProfileController.cs
+C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Controllers\ReviewController.cs
 C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Controllers\RolesController.cs
 C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170516201401_Initial.cs
 C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170516201401_Initial.Designer.cs
@@ -228,3 +229,4 @@ C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Models\Review.cs
 C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Models\SpeechDbContext.cs
 C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\ViewModels\LoginViewModel.cs
 C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\ViewModels\RegisterViewModel.cs
+C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Views\Reviews\ValuesController.cs
