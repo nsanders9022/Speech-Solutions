@@ -60,6 +60,7 @@
 h1 {
     color: #74c0cd;
     font-weight: bold;
+    text-align: center;
 }
 
 h3 {
@@ -115,6 +116,17 @@ tr:nth-child(odd) {
 
 .user-form {
     width: 20%;
+}
+
+#dayna {
+    float: right;
+    border: 3px solid #a69afe;
+    margin: 0 0 10px 20px;
+    padding: 1px;
+}
+
+.about-p {
+    text-align: justify;
 }
 
 
