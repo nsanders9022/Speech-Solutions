@@ -1,5 +1,5 @@
 ﻿.body-div{
-    margin-top: 80px;
+    margin-top: 120px;
 }
 
 .navbar-brand {
@@ -24,11 +24,12 @@
 
 .bottom-navbar {
     background-color:  #bee4e7;
-    margin-top: 50px;
+    margin-top: -70px;
     border: none;
     color: black;
-    /*position: fixed;*/
-    
+    position: fixed;
+    width: 100%;
+    z-index: 2;
 }
 
 .btn a {
@@ -46,8 +47,6 @@
       height: 500px;
       margin: auto;
   }
-
-/*width="460" height="345"*/
 
 .home-body {
     padding-top: 2%;
