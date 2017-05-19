@@ -8,8 +8,8 @@ using Speech.Models;
 namespace Speech.Migrations
 {
     [DbContext(typeof(SpeechDbContext))]
-    [Migration("20170516222426_ProfilesTable")]
-    partial class ProfilesTable
+    [Migration("20170519194743_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -178,6 +178,12 @@ namespace Speech.Migrations
                     b.Property<int>("ProfileId")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("ApplicationUserId");
+
+                    b.Property<string>("ClientFirst");
+
+                    b.Property<string>("ClientLast");
+
                     b.Property<string>("Comment");
 
                     b.Property<DateTime>("DOB");
@@ -186,7 +192,12 @@ namespace Speech.Migrations
 
                     b.Property<string>("LastName");
 
+                    b.Property<string>("UserName");
+
                     b.HasKey("ProfileId");
+
+                    b.HasIndex("ApplicationUserId")
+                        .IsUnique();
 
                     b.ToTable("Profiles");
                 });
@@ -240,6 +251,13 @@ namespace Speech.Migrations
                         .WithMany("Roles")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Speech.Models.Profile", b =>
+                {
+                    b.HasOne("Speech.Models.ApplicationUser", "ApplicationUser")
+                        .WithOne("Profile")
+                        .HasForeignKey("Speech.Models.Profile", "ApplicationUserId");
                 });
         }
     }

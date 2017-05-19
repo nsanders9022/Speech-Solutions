@@ -13,7 +13,19 @@ namespace Speech.Controllers
         private SpeechDbContext db = new SpeechDbContext();
         public IActionResult Index()
         {
+            return View(db.Reviews.ToList());
+        }
+        public IActionResult Create()
+        {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Review review)
+        {
+            db.Reviews.Add(review);
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

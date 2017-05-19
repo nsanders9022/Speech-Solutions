@@ -16,15 +16,5 @@ namespace Speech.Models
         public int ReviewId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-
-        //public Review() { }
-
-        //public Review(string name, string description, int id=0)
-        //{
-        //    Name = name;
-        //    Description = description;
-        //    Id = id;
-        //}
-
     }
 }

@@ -210,18 +210,8 @@ C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Controllers\HomeController.cs
 C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Controllers\ProfileController.cs
 C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Controllers\ReviewController.cs
 C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Controllers\RolesController.cs
-C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170516201401_Initial.cs
-C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170516201401_Initial.Designer.cs
-C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170516222426_ProfilesTable.cs
-C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170516222426_ProfilesTable.Designer.cs
-C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170516222729_BuildTables.cs
-C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170516222729_BuildTables.Designer.cs
-C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170516223944_AddUserNameToProfile.cs
-C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170516223944_AddUserNameToProfile.Designer.cs
-C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170517033809_JoinProfileAndUser.cs
-C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170517033809_JoinProfileAndUser.Designer.cs
-C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170517043926_ClientFirstLast.cs
-C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170517043926_ClientFirstLast.Designer.cs
+C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170519194743_Initial.cs
+C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170519194743_Initial.Designer.cs
 C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\SpeechDbContextModelSnapshot.cs
 C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Models\ApplicationUser.cs
 C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Models\Profile.cs
@@ -229,4 +219,3 @@ C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Models\Review.cs
 C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Models\SpeechDbContext.cs
 C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\ViewModels\LoginViewModel.cs
 C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\ViewModels\RegisterViewModel.cs
-C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Views\Reviews\ValuesController.cs

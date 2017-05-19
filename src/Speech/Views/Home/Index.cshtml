@@ -71,6 +71,12 @@
                 <p>@review.Description</p>
             </div>
         }
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        <button type="submit" class="btn btn-warning">@Html.ActionLink("Add a review", "Create", "Review")</button>
+    }
     </div>
+    <button type="submit" class="btn btn-warning">@Html.ActionLink("See all Reviews", "Index", "Review")</button>
 
 </div>
