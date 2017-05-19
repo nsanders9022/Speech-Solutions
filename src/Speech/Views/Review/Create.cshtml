@@ -4,20 +4,21 @@
 
 @model Speech.Models.Review
 
+<div class="container">
+    <h2>Add a new review</h2>
+    <hr />
 
-<h2>Add a new review</h2>
-<hr />
+    @using (Html.BeginForm())
+    {
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
 
-@using (Html.BeginForm())
-{
-    @Html.LabelFor(model => model.Name)
-    @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+        @Html.LabelFor(model => model.Description)
+        @Html.TextBoxFor(model => model.Description, new { @class = "form-control" })
 
-    @Html.LabelFor(model => model.Description)
-    @Html.TextBoxFor(model => model.Description, new { @class = "form-control" })
+        <input type="submit" class="btn btn-primary" value="Submit" />
+    }
 
-    <input type="submit" class="btn btn-success" value="Add new review" />
-}
-
-<br />
-<p>@Html.ActionLink("Back to product list", "Index")</p>
+    <br />
+    <p>@Html.ActionLink("Back to review list", "Index")</p>
+</div>

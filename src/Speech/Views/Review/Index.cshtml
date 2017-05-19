@@ -15,4 +15,10 @@
         </div>
 
     }
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        <button type="submit" class="btn btn-primary">@Html.ActionLink("Add a review", "Create", "Review")</button>
+    }
+
 </div>
