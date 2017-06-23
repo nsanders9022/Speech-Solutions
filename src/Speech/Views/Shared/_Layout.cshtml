@@ -31,12 +31,17 @@
                     <li class="nav-link">
                         @Html.ActionLink("About", "About", "Home")
                     </li>
+                    <li class="nav-link">
+                        @Html.ActionLink("Speech Milestones", "Milestones", "Home")
+                    </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     @if (User.Identity.IsAuthenticated)
                     {
                         <li class="nav-link">
-                            @Html.ActionLink("Log Out", "LogOff", "Account")
+                            <span class="glyphicon glyphicon-log-out">
+                                @Html.ActionLink("Log Out", "LogOff", "Account")
+                            </span>
                         </li>
                     }
                     else
@@ -45,8 +50,8 @@
                             @Html.ActionLink("Login/Signup", "Index", "Account")
                         </li>*@
 
-                        <li class="nav-link">@Html.ActionLink("Register", "Register", "Account")</li>
-                        <li class="nav-link">@Html.ActionLink("Login","Login","Account")</li>
+                        <li class="nav-link"><span class="glyphicon glyphicon-user">@Html.ActionLink("Register", "Register", "Account")</span></li>
+                        <li class="nav-link"><span class="glyphicon glyphicon-log-in">@Html.ActionLink("Login", "Login", "Account")</span></li>
                     }
                 </ul>
             </div>

@@ -22,5 +22,10 @@ namespace Speech.Controllers
         {
             return View();
         }
+
+        public IActionResult Milestones()
+        {
+            return View();
+        }
     }
 }
