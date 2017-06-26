@@ -216,8 +216,8 @@ dark blu #2f2989*/
     border-radius: 100%;
     background-color: #3b5998;
     box-shadow: 0 0 5px #4582ec;
-    width: 200px;
-    height: 200px;
+    width: 175px;
+    height: 175px;
     margin-left: -100px;
 }
 
@@ -256,8 +256,7 @@ dark blu #2f2989*/
     margin-top:22px;
     margin-bottom: 4px;
     padding:0;
-    color: black;
-    text-decoration: underline;
+    color: #74c0cd;
     font-size: 24px;
 }
 
@@ -386,7 +385,7 @@ dark blu #2f2989*/
   }
   .timeline>li .timeline-image {
     position: static;
-    width: 150px;
+    width: 100px;
     height: 150px;
     margin-bottom:0px;
   }
