@@ -59,7 +59,7 @@
 
 <div class="home-body container">
     <h1>Speech Solutions</h1>
-    <p>Speech Solutions is your first and only stop for online speech therapy needs. Our therapist, Dayna Sanders, provides exceptional one-on-one attention to help all clients reach their speech goals. Because everything is conducted online, travel and accessability are no longer issues. </p>
+    <h3>Speech Solutions is your first and only stop for online speech therapy needs. Our therapist, Dayna Sanders, provides exceptional one-on-one attention to help all clients reach their speech goals. Because everything is conducted online, travel and accessability are no longer issues. </h3>
 </div>
 
 <div class="reviews row">
@@ -76,9 +76,9 @@
     <div class="container">
         @if (User.Identity.IsAuthenticated)
         {
-            <button type="submit" class="btn btn-primary">@Html.ActionLink("Add a review", "Create", "Review")</button>
+            <button type="submit" class="btn">@Html.ActionLink("Add a review", "Create", "Review")</button>
         }
-        <button type="submit" class="btn btn-primary">@Html.ActionLink("See all Reviews", "Index", "Review")</button>
+        <button type="submit" class="btn">@Html.ActionLink("See all Reviews", "Index", "Review")</button>
     </div>
 
 </div>
