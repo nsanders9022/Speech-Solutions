@@ -69,7 +69,7 @@ namespace Speech
             var content2 = new Models.Review
             {
                 Name = "Kristen",
-                Description = "I cannot ut into words how thankful I am for Dayna and Speech Solutions. As my family and I live in a mountainous area of the PNW we do not have easy access to many services like this, but the online option was fantastic and greatly improved my son's life."
+                Description = "I cannot put into words how thankful I am for Dayna and Speech Solutions. As my family and I live in a mountainous area of the PNW we do not have easy access to many services like this, but the online option was fantastic and greatly improved my son's life."
             };
 
             context1.Reviews.Add(content2);

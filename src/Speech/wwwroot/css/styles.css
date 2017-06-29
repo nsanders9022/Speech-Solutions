@@ -21,7 +21,7 @@ body {
     background-color: #a69afe;
 }
 
-.nav-link > *, .navbar-brand,.glyphicon a {
+.nav-link > *, .navbar-brand,.glyphicon a, .dropdown-toggle {
     color: white !important;
     vertical-align:middle;
     font-size: 20px;
@@ -54,10 +54,13 @@ body {
 		
 .btn a {
     color: white;
+    font-size: 16px;
 }
 
 .btn {
-    margin-top: 10px;
+    background-color: #a69afe;
+    margin-top: 30px;
+    border: 2px inset gray;
 }
 
 /*carosel*/
@@ -74,10 +77,6 @@ body {
     height: 400px;
     width: 70%;
     text-align: center;
-}
-
-.btn {
-    background-color: #a69afe;
 }
 
 h1 {
@@ -164,6 +163,15 @@ tr:nth-child(odd) {
     margin-bottom: 20px;
 }
 
+.review h3 {
+    text-align: left;
+    color: #2f2989;
+}
+
+.review p {
+    font-size: 18px;
+    margin: 0 3%
+}
 
 /*green #0d512a
 light blue #74c0cd
