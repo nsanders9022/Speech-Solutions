@@ -214,11 +214,11 @@ dark blu #2f2989*/
     left: 50%;
     border: 7px solid #74c0cd;
     border-radius: 100%;
-    background-color: #3b5998;
+    background-color: #74c0cd;
     box-shadow: 0 0 5px #4582ec;
-    width: 175px;
-    height: 175px;
-    margin-left: -100px;
+    width: 75px;
+    height: 75px;
+    margin-left: -50px;
 }
 
 .timeline>li .timeline-image h4 {
@@ -277,30 +277,30 @@ dark blu #2f2989*/
 .timeline>li:nth-child(odd) .line:before {
     content: "";
     position: absolute;
-    top: 60px;
+    top: 0px;
     bottom: 0;
-    left: 690px;
+    left: 650px;
     width: 4px;
-    height:340px;
+    height:300px;
     background-color: #74c0cd;
-    -ms-transform: rotate(-44deg); /* IE 9 */
-    -webkit-transform: rotate(-44deg); /* Safari */
-    transform: rotate(-44deg);
+    -ms-transform: rotate(-40deg); /* IE 9 */
+    -webkit-transform: rotate(-40deg); /* Safari */
+    transform: rotate(-40deg);
     box-shadow: 0 0 5px #4582ec;
 }
 /*Style for odd div.line*/
 .timeline>li:nth-child(even) .line:before  {
     content: "";
     position: absolute;
-    top: 60px;
+    top: 0px;
     bottom: 0;
     left: 450px;
     width: 4px;
     height:340px;
     background-color: #74c0cd;
-    -ms-transform: rotate(44deg); /* IE 9 */
-    -webkit-transform: rotate(44deg); /* Safari */
-    transform: rotate(44deg);
+    -ms-transform: rotate(40deg); /* IE 9 */
+    -webkit-transform: rotate(40deg); /* Safari */
+    transform: rotate(40deg);
     box-shadow: 0 0 5px #4582ec;
 }
 /* Medium Devices, .visible-md-* */
