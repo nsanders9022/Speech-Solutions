@@ -17,10 +17,5 @@ namespace Speech.Controllers
         {
             return View(db.Reviews.ToList());
         }
-
-        public IActionResult Milestones()
-        {
-            return View();
-        }
     }
 }
