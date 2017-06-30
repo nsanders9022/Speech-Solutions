@@ -33,6 +33,7 @@
                                 <li>@Html.ActionLink("Our Therapist", "Therapists", "About")</li>
                                 <li>@Html.ActionLink("Our Company", "Company", "About")</li>
                                 <li>@Html.ActionLink("Teletherapy", "Teletherapy", "About")</li>
+                                <li>@Html.ActionLink("Reviews", "Index", "Review")</li>
                             </ul>
                         </li>
 
@@ -40,19 +41,10 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Resources<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li>@Html.ActionLink("Speech Milestones", "Milestones", "Resources")</li>
-                                @*<li>@Html.ActionLink("Our Company", "Company", "About")</li>
-                                <li>@Html.ActionLink("Teletherapy", "Teletherapy", "About")</li>*@
+                                <li>@Html.ActionLink("Helpful Resources", "Resources", "Resources")</li>
                             </ul>
                         </li>
-
-
-
-
-
-                        <li class="nav-link">
-                            @Html.ActionLink("Speech Milestones", "Milestones", "Home")
-                        </li>
-                    </ul>
+                       </ul>
                     <ul class="nav navbar-nav navbar-right">
                         @if (User.Identity.IsAuthenticated)
                     {
@@ -104,8 +96,11 @@
         <div class="body-div">
             @RenderBody()
             <div id="footer">
-                <span>1-800-666-5555</span>
-                <span>SpeechSolutions@gmail.com</span>
+                <span><img class="icon" src="~/images/phone.png"/>1-800-666-5555</span>
+                <span><img class="icon" src="~/images/email.png" />SpeechSolutions@gmail.com</span>
+                <a href="facebook.com"><img class="icon" src="~/images/facebook2.png"></a>
+                <a href="linkedin.com"><img class="icon" src="~/images/linkedin2.png"></a>
+                <a href="twitter.com"><img class="icon" src="~/images/twitter2.png" /></a>
             </div>
         </div>
     </div>

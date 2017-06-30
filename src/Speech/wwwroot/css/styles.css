@@ -36,6 +36,11 @@ body {
     z-index:7;
 }
 
+.icon {
+    width: 25px;
+    height: auto;
+}
+
 /*---------------------------------Navigation bar---------------------------------*/
 
 .navbar-toggle {
