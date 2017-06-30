@@ -18,11 +18,6 @@ namespace Speech.Controllers
             return View(db.Reviews.ToList());
         }
 
-        public IActionResult About()
-        {
-            return View();
-        }
-
         public IActionResult Milestones()
         {
             return View();

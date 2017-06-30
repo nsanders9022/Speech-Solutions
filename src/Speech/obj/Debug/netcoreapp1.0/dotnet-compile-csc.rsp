@@ -201,6 +201,7 @@
 -resource:"C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\obj\Debug\netcoreapp1.0\Speechdotnet-compile.deps.json",Speech.deps.json
 "C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Program.cs"
 "C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Startup.cs"
+"C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Controllers\AboutController.cs"
 "C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Controllers\AccountController.cs"
 "C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Controllers\HomeController.cs"
 "C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Controllers\ProfileController.cs"
