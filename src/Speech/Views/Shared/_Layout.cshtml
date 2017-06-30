@@ -13,84 +13,90 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top top-navbar" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">SPEECH SOLUTIONS</a>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                   <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"  aria-expanded="false">About <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("Our Therapist", "About", "Home")</li>
-                            <li>@Html.ActionLink("Teletherapy", "About", "Home")</li>
-                            <li>@Html.ActionLink("Our Company", "About", "Home")</li>
-                           
-                        </ul>
-                    </li>
-                    <li class="nav-link">
-                        @Html.ActionLink("Speech Milestones", "Milestones", "Home")
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    @if (User.Identity.IsAuthenticated)
-                    {
-                        <li class="nav-link">
-                            <span class="glyphicon glyphicon-log-out">
-                                @Html.ActionLink("Log out", "LogOff", "Account")
-                            </span>
+    <div id="container">
+        <nav class="navbar navbar-inverse navbar-fixed-top top-navbar" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">SPEECH SOLUTIONS</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Our Therapist", "About", "Home")</li>
+                                <li>@Html.ActionLink("Teletherapy", "About", "Home")</li>
+                                <li>@Html.ActionLink("Our Company", "About", "Home")</li>
+                            </ul>
                         </li>
+                        <li class="nav-link">
+                            @Html.ActionLink("Speech Milestones", "Milestones", "Home")
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        @if (User.Identity.IsAuthenticated)
+                    {
+                            <li class="nav-link">
+                                @Html.ActionLink("Account Information", "Index", "Profile", new { userName = User.Identity.Name })
+                            </li>
+                            <li class="nav-link">
+                                <span class="glyphicon glyphicon-log-out">
+                                    @Html.ActionLink("Log out", "LogOff", "Account")
+                                </span>
+                            </li>
                     }
                     else
                     {
-                        @*<li class="nav-link">
-                            @Html.ActionLink("Login/Signup", "Index", "Account")
-                        </li>*@
-
-                        <li class="nav-link"><span class="glyphicon glyphicon-user">@Html.ActionLink("Register", "Register", "Account")</span></li>
-                        <li class="nav-link"><span class="glyphicon glyphicon-log-in">@Html.ActionLink("Login", "Login", "Account")</span></li>
+                            <li class="nav-link"><span class="glyphicon glyphicon-user">@Html.ActionLink("Register", "Register", "Account")</span></li>
+                            <li class="nav-link"><span class="glyphicon glyphicon-log-in">@Html.ActionLink("Login", "Login", "Account")</span></li>
                     }
-                </ul>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        @*<nav class="navbar navbar-inverse bottom-navbar" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="nav-link">
+                                <h3>1-800-555-6425</h3>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            @if (User.Identity.IsAuthenticated)
+                            {
+
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </nav>*@
+
+        <div class="body-div">
+            @RenderBody()
+            <div id="footer">
+                <span>Phone number</span>
+                <span>Phone number</span>
+                <span>Phone number</span>
+                <span>Phone number</span>
             </div>
         </div>
-    </nav>
-
-     <nav class="navbar navbar-inverse bottom-navbar" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="nav-link">
-                        <h3>1-800-555-6425</h3>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    @if (User.Identity.IsAuthenticated)
-                    {
-                        <li class="nav-link">
-                            @Html.ActionLink("Account Information", "Index", "Profile", new { userName = User.Identity.Name })
-                        </li>
-                    }
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div class="body-div">
-        @RenderBody()
     </div>
+ 
 </body>
 </html>
