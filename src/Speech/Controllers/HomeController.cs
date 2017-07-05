@@ -17,5 +17,10 @@ namespace Speech.Controllers
         {
             return View(db.Reviews.ToList());
         }
+
+        public IActionResult Schedule()
+        {
+            return View();
+        }
     }
 }
