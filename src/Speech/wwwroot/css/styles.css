@@ -125,7 +125,7 @@ body {
 
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-    width: 80%;
+    width: 100%;
     height: 800px;
     margin: auto;
 }
@@ -133,10 +133,14 @@ body {
 /*---------------------------------Home page---------------------------------*/
 
 .home-body {
-    padding-top: 7%;
+    padding-top: 3%;
     padding-bottom: 2%;
     height: 1000px;
-    width: 70%;
+    /*width: 70%;*/
+}
+
+.intro {
+    height: 300px;
 }
 
 h1 {
@@ -151,13 +155,18 @@ h3 {
 
 /*---------------------------------Speech Bubbles/Reviews---------------------------------*/
 
-/*.reviews {
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 7%;
-    height: 100%;
-    margin: 0 auto;
-}*/
+.reviews {
+    background-color: #e5e6e8;
+    width: 130%;
+    padding-left: 20%;
+    margin-right: -10px;
+}
+
+.review-buttons {
+    padding-bottom: 3%;
+    margin-top: -3%;
+    float: left; 
+}
 
 .bubble h4 {
     font-size: 24px;
@@ -173,10 +182,10 @@ h3 {
 
 .bubble {
     position: relative;
-    width: 355px;
-    height: 225px;
+    width: 375px;
+    height: 275px;
     padding: 12px;
-    margin: 5% 1% 1% 1%;
+    margin: 5% 1%;
     background: #FFFFFF;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -211,6 +220,13 @@ h3 {
     bottom: -41px;
     left: 14%;
 }
+
+.quotes {
+    font-size:50px;
+    line-height:0.6em;
+    opacity:0.2;
+}
+
 
 /*---------------------------------Account Info---------------------------------*/
 

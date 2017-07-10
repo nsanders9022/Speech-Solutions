@@ -57,27 +57,31 @@
     </div>
 </div>
 
-<div class="home-body container">
-    <h1>Speech Solutions</h1>
-    <hr />
-    <h3>Speech Solutions is your first and only stop for online speech therapy needs. Our therapist, Dayna Sanders, provides exceptional one-on-one attention to help all clients reach their speech goals. Because everything is conducted online, travel and accessability are no longer issues. </h3>
+<div class="home-body">
+    <div class="container intro">
+        <h1>Speech Solutions</h1>
+        <hr />
+        <h3>Speech Solutions is your first and only stop for online speech therapy needs. Our therapist, Dayna Sanders, provides exceptional one-on-one attention to help all clients reach their speech goals. Because everything is conducted online, travel and accessability are no longer issues. </h3>
+    </div>
 
     <div class="reviews row">
             @for( int i = 0; i < 3; i++)
             {
                 <div class="bubble col-xs-4">
                     <h4>@Model[i].Name</h4>
-                    <p>@Model[i].Description</p>
+                    <p><span class="quotes">&#10077;</span>@Model[i].Description</p>
                 </div>
             }
 
 
     </div>
-    @if (User.Identity.IsAuthenticated)
-            {
-        <button type="submit" class="btn">@Html.ActionLink("Add a review", "Create", "Review")</button>
-    }
-    <button type="submit" class="btn">@Html.ActionLink("See all Reviews", "Index", "Review")</button>
+    <div class="review-buttons reviews row">
+        @if (User.Identity.IsAuthenticated)
+                {
+            <button type="submit" class="btn">@Html.ActionLink("Add a review", "Create", "Review")</button>
+        }
+        <button type="submit" class="btn">@Html.ActionLink("See all Reviews", "Index", "Review")</button>
+    </div>
 
 </div>
 
