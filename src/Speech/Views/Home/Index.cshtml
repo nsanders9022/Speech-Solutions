@@ -69,7 +69,7 @@
             {
                 <div class="bubble col-xs-4">
                     <h4>@Model[i].Name</h4>
-                    <p><span class="quotes">&#10077;</span>@Model[i].Description</p>
+                    <p><span class="quotes">&#10077;</span>@Model[i].Description</p> 
                 </div>
             }
 
@@ -81,6 +81,44 @@
             <button type="submit" class="btn">@Html.ActionLink("Add a review", "Create", "Review")</button>
         }
         <button type="submit" class="btn">@Html.ActionLink("See all Reviews", "Index", "Review")</button>
+    </div>
+
+    <div class="process container">
+        <h1>Process</h1>
+        <img class="process-icon" id="schedule-img" src="~/images/schedule.png" /> 
+        <img class="process-icon" id="consultation-img" src="~/images/phoneCell.png" />
+        <img class="process-icon" id="eval-img" src="~/images/eval.png" />
+        <img class="process-icon" id="recommendations-img" src="~/images/results.png" />
+        <img class="process-icon" id="sessions-img" src="~/images/onlineChat.png" />
+
+        <div class="results">
+
+        </div>
+        <div class="schedule step">
+            <h3>Schedule consultation</h3>
+            <h4>View our @Html.ActionLink("schedule", "Schedule", "Home") page to select a time that works best for you</h4>
+            <h4>Most consultations last 60 minutes</h4>
+        </div>
+        <div class="consultation step">
+            <h3>Consult with the therapist</h3>
+            <h4>At the scheduled consultation time the therapist will call you</h4>
+            <h4>An initial screening of your child will be conducted to determine qualification for this therapy</h4>
+            <h4>A technical screening will be performed to ensure everything is working properly</h4>
+            <h4>Schedule the evaluation</h4>
+        </div>
+        <div class="evaluation step">
+            <h3>Perform evaluation</h3>
+            <h4>Evaluations last 2-3 hours</h4>
+        </div>
+        <div class="recommendations step">
+            <h3>Recommendations and schedule sessions</h3>
+            <h4>Recommendations will be provided based on the evaulation</h4>
+            <h4>Sessions will be scheduled</h4>
+        </div>
+        <div class="sessions step">
+            <h3>Therapy begins</h3>
+            <h4>Sessions will take place for the duration and frequency that is best for the child and for your schedule</h4>
+        </div>
     </div>
 
 </div>

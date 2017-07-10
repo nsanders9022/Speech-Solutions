@@ -20,5 +20,22 @@
     $(".right").click(function () {
         $("#myCarousel").carousel("next");
     });
+
+    // Show process text when hover over image
+    $("img#schedule-img").hover(function () {
+        $("div.schedule").toggle();
+    })
+    $("img#consultation-img").hover(function () {
+        $("div.consultation").toggle();
+    })
+    $("img#eval-img").hover(function () {
+        $("div.evaluation").toggle();
+    })
+    $("img#recommendations-img").hover(function () {
+        $("div.recommendations").toggle();
+    })
+    $("img#sessions-img").hover(function () {
+        $("div.sessions").toggle();
+    })
 });
 

@@ -135,7 +135,7 @@ body {
 .home-body {
     padding-top: 3%;
     padding-bottom: 2%;
-    height: 1000px;
+    height: 100%;
     /*width: 70%;*/
 }
 
@@ -222,11 +222,25 @@ h3 {
 }
 
 .quotes {
-    font-size:50px;
+    font-size:60px;
     line-height:0.6em;
     opacity:0.2;
 }
 
+
+
+
+.process {
+    height: 500px;
+}
+
+.process-icon {
+    height: 150px;
+}
+
+.schedule, .consultation, .evaluation, .recommendations, .sessions {
+    display: none;  
+}
 
 /*---------------------------------Account Info---------------------------------*/
 
