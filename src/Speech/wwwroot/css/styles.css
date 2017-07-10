@@ -140,11 +140,7 @@ body {
 .carousel-caption h3 {
     color: white !important;
     font-weight: bold;
-
 }
-
-
-
 
 /*---------------------------------Home page---------------------------------*/
 
@@ -339,6 +335,15 @@ light blue #74c0cd
 light green #bee4e7
 lilac #a69afe
 dark blu #2f2989*/
+
+
+/*---------------------------------Resource Page---------------------------------*/
+.resource-image {
+    height: 200px;
+}
+
+
+
 
 
 /*---------------------------------Milestone Page---------------------------------*/
