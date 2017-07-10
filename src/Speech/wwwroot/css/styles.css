@@ -15,7 +15,6 @@ body {
 body {
     font-family: 'Open Sans', sans-serif;
     /*height: 95vh;*/
-
 }
 
 #container {
@@ -44,11 +43,11 @@ body {
     text-align: left;
     font-size: 12px;
     color: gray;
-    z-index:7;
+    z-index: 7;
 }
 
 .footer-heading {
-    color: #2f2989; 
+    color: #2f2989;
     font-weight: bold;
     padding-top: 10px;
 }
@@ -63,23 +62,23 @@ body {
 /*---------------------------------Navigation bar---------------------------------*/
 
 .navbar-toggle {
-    z-index:3;
+    z-index: 3;
 }
 
 .top-navbar {
     background-color: #a69afe;
 }
 
-.nav-link > *, .navbar-brand,.glyphicon a, .dropdown-toggle {
+.nav-link > *, .navbar-brand, .glyphicon a, .dropdown-toggle {
     color: white !important;
     vertical-align: middle;
     font-size: 17px;
 }
 
 .dropdown-toggle:active, .open .dropdown-toggle {
-    background:#a69afe !important; 
+    background: #a69afe !important;
     color: white !important;
- }
+}
 
 .glyphicon {
     vertical-align: middle;
@@ -90,7 +89,7 @@ body {
     width: 100%;
     left: 0;
     text-align: center;
-    margin:0 auto;
+    margin: 0 auto;
     font-size: 30px;
 }
 
@@ -110,7 +109,7 @@ body {
 }*/
 
 /*---------------------------------Buttons---------------------------------*/
-		
+
 .btn a {
     color: white;
     font-size: 16px;
@@ -125,20 +124,19 @@ body {
 /*---------------------------------Carosel---------------------------------*/
 
 .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 80%;
-      height: 500px;
-      margin: auto;
-  }
+.carousel-inner > .item > a > img {
+    width: 80%;
+    height: 800px;
+    margin: auto;
+}
 
 /*---------------------------------Home page---------------------------------*/
 
 .home-body {
-    padding-top: 3%;
+    padding-top: 7%;
     padding-bottom: 2%;
-    height: 600px;
+    height: 1000px;
     width: 70%;
-    text-align: center;
 }
 
 h1 {
@@ -151,31 +149,67 @@ h3 {
     text-align: center;
 }
 
-.reviews {
+/*---------------------------------Speech Bubbles/Reviews---------------------------------*/
+
+/*.reviews {
     padding-left: 10%;
     padding-right: 10%;
+    padding-top: 7%;
     height: 100%;
     margin: 0 auto;
-}
+}*/
 
-.review-div {
-    width: 80%;
-}
-
-.review-list {
-    /*border: 2px solid  #2f2989;*/ 
-    border-radius: 10%;
-    height: 275px;
-    width: 300px;
-    margin: 5% 1% 1% 1%;
-    background-color: #74c0cd;
-    padding: 12px;
-    box-shadow: black 5px 5px;
-}
-
-.review-list h4 {
+.bubble h4 {
     font-size: 24px;
+    font-weight: bold;
     color: #2f2989;
+}
+
+.bubble p {
+    font-size: 16px;
+    text-overflow: ellipsis;
+    font-style: italic;
+}
+
+.bubble {
+    position: relative;
+    width: 355px;
+    height: 225px;
+    padding: 12px;
+    margin: 5% 1% 1% 1%;
+    background: #FFFFFF;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: #bee4e7 solid 6px;
+}
+
+.bubble:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 30px 24px 0;
+    border-color: #FFFFFF transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    margin-left: -24px;
+    bottom: -30px;
+    left: 14%;
+}
+
+.bubble:before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 35px 29px 0;
+    border-color: #bee4e7 transparent;
+    display: block;
+    width: 0;
+    z-index: 0;
+    margin-left: -29px;
+    bottom: -41px;
+    left: 14%;
 }
 
 /*---------------------------------Account Info---------------------------------*/
@@ -190,7 +224,7 @@ table {
 }
 
 table, th, td {
-   border: 1px solid black;
+    border: 1px solid black;
 }
 
 td {
@@ -237,7 +271,7 @@ tr:nth-child(odd) {
 
 .review p {
     font-size: 18px;
-    margin: 0 3%
+    margin: 0 3%;
 }
 
 /*green #0d512a
@@ -249,84 +283,85 @@ dark blu #2f2989*/
 
 /*---------------------------------Milestone Page---------------------------------*/
 .timeline {
-  white-space: nowrap;
-  overflow-x: hidden;
+    white-space: nowrap;
+    overflow-x: hidden;
 }
- 
+
 .timeline ol {
-  font-size: 0;
-  width: 100vw;
-  padding: 250px 0;
-  transition: all 1s;
+    font-size: 0;
+    width: 100vw;
+    padding: 250px 0;
+    transition: all 1s;
 }
- 
+
 .timeline ol li {
-  position: relative;
-  display: inline-block;
-  list-style-type: none;
-  width: 160px;
-  height: 3px;
-  background: green;
+    position: relative;
+    display: inline-block;
+    list-style-type: none;
+    width: 160px;
+    height: 3px;
+    background: green;
 }
- 
+
 .timeline ol li:last-child {
-  width: 280px;
+    width: 280px;
 }
- 
+
 .timeline ol li:not(:first-child) {
-  margin-left: 14px;
+    margin-left: 14px;
 }
- 
+
 .timeline ol li:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: calc(100% + 1px);
-  bottom: 0;
-  width: 30px;
-  height: 30px;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  background: red;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 1px);
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: red;
 }
+
 .timeline ol li div {
-  position: absolute;
-  left: calc(100% + 7px);
-  width: 280px;
-  padding: 15px;
-  font-size: 1rem;
-  white-space: normal;
-  color: black;
-  background: yellow;
+    position: absolute;
+    left: calc(100% + 7px);
+    width: 280px;
+    padding: 15px;
+    font-size: 1rem;
+    white-space: normal;
+    color: black;
+    background: yellow;
 }
- 
+
 .timeline ol li div::before {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
 }
 
 .timeline ol li:nth-child(odd) div {
-  top: -16px;
-  transform: translateY(-100%);
+    top: -16px;
+    transform: translateY(-100%);
 }
- 
+
 .timeline ol li:nth-child(odd) div::before {
-  top: 100%;
-  border-width: 8px 8px 0 0;
-  border-color: blue transparent transparent transparent;
+    top: 100%;
+    border-width: 8px 8px 0 0;
+    border-color: blue transparent transparent transparent;
 }
 
 .timeline ol li:nth-child(even) div {
-  top: calc(100% + 16px);
+    top: calc(100% + 16px);
 }
- 
+
 .timeline ol li:nth-child(even) div::before {
-  top: -8px;
-  border-width: 8px 0 0 8px;
-  border-color: transparent transparent transparent blue;
+    top: -8px;
+    border-width: 8px 0 0 8px;
+    border-color: transparent transparent transparent blue;
 }

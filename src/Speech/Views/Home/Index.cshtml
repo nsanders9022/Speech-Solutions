@@ -65,18 +65,19 @@
     <div class="reviews row">
             @for( int i = 0; i < 3; i++)
             {
-                <div class="review-list col-xs-4">
+                <div class="bubble col-xs-4">
                     <h4>@Model[i].Name</h4>
                     <p>@Model[i].Description</p>
                 </div>
             }
 
-            @if (User.Identity.IsAuthenticated)
-            {
-                <button type="submit" class="btn">@Html.ActionLink("Add a review", "Create", "Review")</button>
-            }
-            <button type="submit" class="btn">@Html.ActionLink("See all Reviews", "Index", "Review")</button>
 
     </div>
+    @if (User.Identity.IsAuthenticated)
+            {
+        <button type="submit" class="btn">@Html.ActionLink("Add a review", "Create", "Review")</button>
+    }
+    <button type="submit" class="btn">@Html.ActionLink("See all Reviews", "Index", "Review")</button>
+
 </div>
 
