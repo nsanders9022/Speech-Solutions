@@ -130,6 +130,22 @@ body {
     margin: auto;
 }
 
+.carousel-caption {
+    background-color: rgba(229, 230, 232, 0.8);
+    border: 2px solid #74c0cd;
+    width: 30%;
+    margin: 0 auto;
+}
+
+.carousel-caption h3 {
+    color: white !important;
+    font-weight: bold;
+
+}
+
+
+
+
 /*---------------------------------Home page---------------------------------*/
 
 .home-body {
@@ -230,7 +246,8 @@ h3 {
 /*---------------------------------Process Section---------------------------------*/
 
 .process {
-    height: 500px;
+    height: 580px;
+    padding-top: 5%;
 }
 
 .process-images {
@@ -250,6 +267,10 @@ h3 {
 
 .step h3 {
     font-weight: bold;
+}
+
+.step h4 {
+    padding-bottom: 15px;
 }
 /*---------------------------------Account Info---------------------------------*/
 
