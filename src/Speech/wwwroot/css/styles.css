@@ -311,20 +311,27 @@ tr:nth-child(odd) {
 
 .about-square {
     height: 200px;
-    margin: 6px;
+    margin: 0.5%;
     width: 32%;
     background-color: #bee4e7;
+    text-align: center;
+    padding-top: 55px;
 }
 
-.about-square ul li span {
-    font-size: 30px;
+.scroll-links {
+    font-size: 25px;
     color: #2f2989;
     font-weight: bold;
-    text-align: center;
+    list-style: none;
+}
+
+.about-square:hover {
+    cursor: pointer;
+    border: 1px solid black;
 }
 
 .abouts {
-    margin-left: 5px;
+    margin-left: 0.5%;
 }
 
 /*.links li{
