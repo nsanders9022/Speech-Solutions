@@ -38,6 +38,7 @@
         $("div.sessions").toggle();
     })
 
+
     //scroll down to section of page
     $("#company").click(function () {
         $('html,body').animate({
@@ -54,7 +55,7 @@
             scrollTop: $(".teletherapy").offset().top
         }, 'slow');
     });
-    //up arrow
+        //up arrow
     $(".up-arrow").click(function () {
         $("html, body").animate({ scrollTop: 0 }, "slow");
     });
