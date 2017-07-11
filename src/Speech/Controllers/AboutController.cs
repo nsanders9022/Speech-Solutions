@@ -14,20 +14,5 @@ namespace Speech.Controllers
         {
             return View();
         }
-
-        public IActionResult Therapists()
-        {
-            return View();
-        }
-
-        public IActionResult Teletherapy()
-        {
-            return View();
-        }
-
-        public IActionResult Company()
-        {
-            return View();
-        }
     }
 }
