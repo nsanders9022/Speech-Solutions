@@ -340,11 +340,25 @@ dark blu #2f2989*/
 /*---------------------------------Resource Page---------------------------------*/
 .resource-image {
     height: 200px;
+    margin: auto;
+    display: block;
 }
 
+.resources h4 {
+    font-weight: bold;
+    text-align: center;
+}
 
+.author {
+    color: gray;
+    margin-left: 5%;
+}
 
+.resources a {
+    display: block;
+    padding-bottom: 15px;
 
+}
 
 /*---------------------------------Milestone Page---------------------------------*/
 .timeline {
