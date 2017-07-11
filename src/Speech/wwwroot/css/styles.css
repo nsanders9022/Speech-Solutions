@@ -178,6 +178,7 @@ h3 {
     padding-bottom: 3%;
     margin-top: -3%;
     float: left; 
+    display: block;
 }
 
 .bubble h4 {
@@ -320,14 +321,14 @@ tr:nth-child(odd) {
 
 /*---------------------------------Review Page---------------------------------*/
 
-.review h3 {
-    text-align: left;
-    color: #2f2989;
+.reviews-page {
+    width: 100%;
+    padding-left: 20%;
+    margin-right: -10px;
 }
 
-.review p {
-    font-size: 18px;
-    margin: 0 3%;
+.reviews-page-button {
+    margin-bottom: 30px;
 }
 
 /*green #0d512a

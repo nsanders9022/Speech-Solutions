@@ -4,21 +4,37 @@
 
 @model IEnumerable<Speech.Models.Review>
 
-<div class="container">
+<div class="">
     <h1>Reviews</h1>
     <hr />
-    @foreach(var product in Model)
+    @*@foreach(var product in Model)
     {
         <div class="review">
             <h3>@product.Name</h3>
             <p>@product.Description</p>
         </div>
 
-    }
+    }*@
 
-    @if (User.Identity.IsAuthenticated)
-    {
-        <button type="submit" class="btn">@Html.ActionLink("Add a review", "Create", "Review")</button>
-    }
+    <div class="reviews-page row">
+        @foreach(var review in Model)
+        {
+            <div class="bubble col-xs-3">
+                <h4>@review.Name</h4>
+                <p><span class="quotes">&#10077;</span>@review.Description</p>
+            </div>
+        }
+    </div>
+
+    <div class="container reviews-page-button">
+        @if (User.Identity.IsAuthenticated)
+        {
+            <button type="submit" class="btn">@Html.ActionLink("Add a review", "Create", "Review")</button>
+        }
+    </div>
+
+
+
+   
 
 </div>
