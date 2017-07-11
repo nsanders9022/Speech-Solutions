@@ -45,10 +45,10 @@ namespace Speech.ViewModels
         [Display(Name = "Comments")]
         public string Comment { get; set; }
 
-        [Display(Name = "Client First Name")]
+        [Display(Name = "Child First Name")]
         public string ClientFirst { get; set; }
 
-        [Display(Name = "Client Last Name")]
+        [Display(Name = "Child Last Name")]
         public string ClientLast { get; set; }
    }
 }

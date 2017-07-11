@@ -20,21 +20,23 @@
         <label>Last Name</label>
         @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
 
-        <label>Client Date of Birth</label>
+        <label>Child First Name</label>
+        @Html.EditorFor(model => model.ClientFirst, new { htmlAttributes = new { @class = "form-control" } })
+
+        <label>Child Last Name</label>
+        @Html.EditorFor(model => model.ClientLast, new { htmlAttributes = new { @class = "form-control" } })
+       
+
+        <label>Child Date of Birth</label>
         @Html.EditorFor(model => model.DOB, new { htmlAttributes = new { @class = "form-control" } })
 
         <label>Comment</label>
         @Html.EditorFor(model => model.Comment, new { htmlAttributes = new { @class = "form-control" } })
 
-        <label>Client First Name</label>
-        @Html.EditorFor(model => model.ClientFirst, new { htmlAttributes = new { @class = "form-control" } })
-
-        <label>Client Last Name</label>
-        @Html.EditorFor(model => model.ClientLast, new { htmlAttributes = new { @class = "form-control" } })
         <br />
+        <p>@Html.ActionLink("Back to profile information", "Index", new { userName = User.Identity.Name }, new { id = Model.ProfileId })</p>
+        
         <input type="submit" class="btn" value="Save" />
     }
 
-    <br />
-    <p>@Html.ActionLink("Back to profile information", "Index", new { userName = User.Identity.Name }, new { id = Model.ProfileId })</p>
  </div>

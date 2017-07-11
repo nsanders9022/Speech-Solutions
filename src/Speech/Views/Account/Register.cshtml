@@ -30,12 +30,14 @@
 
         @Html.LabelFor(m => m.Password)
         @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-
+        
         @Html.LabelFor(m => m.ConfirmPassword)
         @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+        
+        <p>*Password must contain at least one number, upper and lower case letters, and a special character. Passwords must be at least 6 characters long.</p>
 
         <hr />
-        <h3>Client Information</h3>
+        <h3>Child Information</h3>
 
         @Html.LabelFor(m => m.ClientFirst)
         @Html.TextBoxFor(m => m.ClientFirst, new { @class = "form-control" })
@@ -50,7 +52,6 @@
         @Html.LabelFor(m => m.Comment)
         @Html.TextAreaFor(m => m.Comment, new { @class = "form-control" })
 
-        <p>*Password must contain at least one number, upper and lower case letters, and a special character. Passwords must be at least 6 characters long.</p>
 
         <input type="submit" value="Register" class="btn" />
     }
