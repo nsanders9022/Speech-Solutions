@@ -303,6 +303,39 @@ tr:nth-child(odd) {
 
 /*---------------------------------About Page--------------------------------*/
 
+.about-image img {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.about-square {
+    height: 200px;
+    margin: 6px;
+    width: 32%;
+    background-color: #bee4e7;
+}
+
+.about-square ul li span {
+    font-size: 30px;
+    color: #2f2989;
+    font-weight: bold;
+    text-align: center;
+}
+
+.abouts {
+    margin-left: 5px;
+}
+
+/*.links li{
+  cursor: pointer;
+  font-size: 18px;
+  color: #623a45;
+  display: inline;
+  padding-right: 10px;
+  letter-spacing: 0px;
+}*/
+
 #dayna {
     float: right;
     border: 3px solid #a69afe;
@@ -312,10 +345,6 @@ tr:nth-child(odd) {
 
 .about-p {
     text-align: justify;
-}
-
-.form-control {
-    margin-bottom: 20px;
 }
 
 .scroll-section {
@@ -329,7 +358,12 @@ tr:nth-child(odd) {
   cursor: pointer;
 }
 
+
 /*---------------------------------Review Page---------------------------------*/
+
+.form-control {
+    margin-bottom: 20px;
+}
 
 .reviews-page {
     width: 100%;
