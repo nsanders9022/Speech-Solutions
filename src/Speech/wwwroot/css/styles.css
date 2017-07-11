@@ -318,6 +318,17 @@ tr:nth-child(odd) {
     margin-bottom: 20px;
 }
 
+.scroll-section {
+    height: 500px;
+    width: 100%;
+}
+
+.up-arrow {
+  height: 30px;
+  float: right;
+  cursor: pointer;
+}
+
 /*---------------------------------Review Page---------------------------------*/
 
 .reviews-page {
