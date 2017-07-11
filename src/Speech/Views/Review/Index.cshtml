@@ -4,17 +4,11 @@
 
 @model IEnumerable<Speech.Models.Review>
 
-<div class="">
+<div class="container">
     <h1>Reviews</h1>
     <hr />
-    @*@foreach(var product in Model)
-    {
-        <div class="review">
-            <h3>@product.Name</h3>
-            <p>@product.Description</p>
-        </div>
+</div>
 
-    }*@
 
     <div class="reviews-page row">
         @foreach(var review in Model)
@@ -36,5 +30,3 @@
 
 
    
-
-</div>
