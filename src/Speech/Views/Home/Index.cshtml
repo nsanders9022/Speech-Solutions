@@ -65,22 +65,22 @@
     </div>
 
     <div class="reviews row">
-            @for( int i = 0; i < 3; i++)
-            {
-                <div class="bubble col-xs-4">
-                    <h4>@Model[i].Name</h4>
-                    <p><span class="quotes">&#10077;</span>@Model[i].Description</p> 
-                </div>
+        @for( int i = 0; i < 3; i++)
+        {
+            <div class="bubble col-xs-4">
+                <h4>@Model[i].Name</h4>
+                <p><span class="quotes">&#10077;</span>@Model[i].Description</p> 
+            </div>
+        }
+        <div class="review-buttons reviews row">
+            @if (User.Identity.IsAuthenticated)
+                    {
+                <button type="submit" class="btn">@Html.ActionLink("Add a review", "Create", "Review")</button>
             }
+            <button type="submit" class="btn">@Html.ActionLink("See all Reviews", "Index", "Review")</button>
+        </div>
     </div>
 
-    <div class="review-buttons reviews row">
-        @if (User.Identity.IsAuthenticated)
-                {
-            <button type="submit" class="btn">@Html.ActionLink("Add a review", "Create", "Review")</button>
-        }
-        <button type="submit" class="btn">@Html.ActionLink("See all Reviews", "Index", "Review")</button>
-    </div>
 
     <div class="process container">
         <h1>Process</h1>
