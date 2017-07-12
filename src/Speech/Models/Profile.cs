@@ -16,6 +16,7 @@ namespace Speech.Models
         public int ProfileId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime DOB { get; set; }
         public string Comment { get; set; }
         public string UserName { get; set; }
