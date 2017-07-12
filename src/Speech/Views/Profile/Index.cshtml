@@ -10,9 +10,93 @@
 <div class="container">
     @if (User.Identity.IsAuthenticated)
     {
+        
         <h1>Your Profile Information</h1>
         <hr />
-        <table>
+
+        <div class="info">
+            <div class="row">
+                <div class="col-sm-6">
+                    <img class="person" src="~/images/adult.png" />
+                    <hr />
+                </div>
+                <div class="col-sm-6">
+                    <img class="person" src="~/images/child.png" />
+                    <hr />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4 class="property">First Name:</h4>
+                        </div>
+                        <div class="col-sm-6">
+                            <h4>@Html.DisplayFor(model => model.FirstName)</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4 class="property">Last Name:</h4>
+                        </div>
+                        <div class="col-sm-6">
+                            <h4>@Html.DisplayFor(model => model.LastName)</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4 class="property">User Name:</h4>
+                        </div>
+                        <div class="col-sm-6">
+                            <h4>@Html.DisplayFor(model => model.UserName)</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4 class="property">Child First Name:</h4>
+                        </div>
+                        <div class="col-sm-6">
+                            <h4>@Html.DisplayFor(model => model.ClientFirst)</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4 class="property">Child Last Name:</h4>
+                        </div>
+                        <div class="col-sm-6">
+                            <h4>@Html.DisplayFor(model => model.ClientLast)</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4 class="property">Child Date of Birth:</h4>
+                        </div>
+                        <div class="col-sm-6">
+                            <h4>@Html.DisplayFor(model => model.DOB)</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <hr />
+                <div class="col-sm-3">
+                    <img class="comment" src="~/images/comment.jpg" />
+                </div>
+                @*<div class="col-sm-3">
+                    <h4 class="property">Comment:</h4>
+                </div>*@
+                <div class="col-sm-9">
+                    <h4>@Html.DisplayFor(model => model.Comment)</h4>
+                </div>
+            </div>
+        </div>
+
+
+
+        @*<table>
             <tr>
                 <td class="property">First Name:</td>
                 <td>@Html.DisplayFor(model => model.FirstName)</td>
@@ -41,7 +125,7 @@
                 <td class="property">Comments:</td>
                 <td>@Html.DisplayFor(model => model.Comment)</td>
             </tr>
-        </table>
+        </table>*@
     }
-<button class="btn" id="edit-button">@Html.ActionLink("Edit your profile information","Edit", new { userName = User.Identity.Name })</button>
+<button class="btn" id="edit-button">@Html.ActionLink("Edit profile information","Edit", new { userName = User.Identity.Name })</button>
 </div>
