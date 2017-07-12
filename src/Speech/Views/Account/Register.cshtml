@@ -47,13 +47,15 @@
 
         @Html.LabelFor(m => m.DOB)
         <br />
-        @Html.EditorFor(model => model.DOB, new { @type = "date", @class = "form-control" })
-        <br />
+        @Html.EditorFor(model => model.DOB, new { htmlAttributes = new { @class = "form-control", @type = "date" } })
+     
         @Html.LabelFor(m => m.Comment)
         @Html.TextAreaFor(m => m.Comment, new { @class = "form-control" })
 
 
         <input type="submit" value="Register" class="btn" />
+        <br />
+        <br />
     }
 
  </div>

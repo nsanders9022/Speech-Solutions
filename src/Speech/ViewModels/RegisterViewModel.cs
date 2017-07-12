@@ -38,7 +38,7 @@ namespace Speech.ViewModels
         public string LastName { get; set; }
 
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:MM-dd-yyyy}", ApplyFormatInEditMode = true)]
         [Display(Name = "Date of Birth")]
         public DateTime DOB { get; set; }
 
