@@ -4,7 +4,7 @@
 
 @model Speech.Models.Review
 
-<div class="container">
+<div class="container user-form">
     <h2>Add a new review</h2>
     <hr />
 
@@ -13,8 +13,8 @@
         @Html.LabelFor(model => model.Name)
         @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
 
-        @Html.LabelFor(model => model.Description)
-        @Html.TextBoxFor(model => model.Description, new { @class = "form-control" })
+        <label>Review</label>
+        @Html.TextAreaFor(model => model.Description, new { @class = "form-control" })
 
         <input type="submit" class="btn" value="Submit" />
     }
