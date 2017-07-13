@@ -53,15 +53,13 @@
                                 @Html.ActionLink("Account Information", "Index", "Profile", new { userName = User.Identity.Name })
                             </li>
                             <li class="nav-link">
-                                <span class="glyphicon glyphicon-log-out">
-                                    @Html.ActionLink("Log out", "LogOff", "Account")
-                                </span>
+                                @Html.ActionLink("Log out", "LogOff", "Account")
                             </li>
                     }
                     else
                     {
-                            <li class="nav-link"><span class="glyphicon glyphicon-user">@Html.ActionLink("Register", "Register", "Account")</span></li>
-                            <li class="nav-link"><span class="glyphicon glyphicon-log-in">@Html.ActionLink("Login", "Login", "Account")</span></li>
+                            <li class="nav-link">@Html.ActionLink("Register", "Register", "Account")</li>
+                            <li class="nav-link">@Html.ActionLink("Login", "Login", "Account")</li>
                     }
                     </ul>
                 </div>
@@ -84,6 +82,7 @@
                         <hr />
                         <p>@Html.ActionLink("About Us", "Company", "About")</p>
                         <p>@Html.ActionLink("Schedule an appointment", "Schedule", "Home")</p>
+                        <p>@Html.ActionLink("Helpful Resources", "Resources", "Resources")</p>
                     </div>
                     <div class="col-sm-2">
                         <p class="footer-heading">Connect With Us</p>
