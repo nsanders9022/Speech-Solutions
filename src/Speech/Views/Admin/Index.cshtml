@@ -4,14 +4,18 @@
 
 @model IEnumerable<Speech.Models.ApplicationUser>
 
-<h5>All users</h5>
+<div class="container user-form">
 
-<ul>
-    @foreach (var user in Model)
-    {
-        <li>@user.UserName</li>
-    }
-</ul>
+    <h1>All users</h1>
+    <hr />
 
+    <ul>
+        @foreach (var user in Model)
+        {
+            <li>@user.UserName</li>
+        }
+    </ul>
 
-@Html.ActionLink("Role Console", "Index", "Roles")
+    @Html.ActionLink("Role Console", "Index", "Roles")
+
+</div>

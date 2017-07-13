@@ -4,18 +4,30 @@
 
 @model IEnumerable<Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRole>
 
-<h2>Roles Listing </h2>
+<div class="container user-form">
 
-<div>
-    @foreach (var role in Model)
-    {
-        <p>
-            <strong>@role.Name | </strong>
-            <button class="btn btn-danger">@Html.ActionLink("Delete", "Delete", new { roleName = @role.Name })</button>
-            <button class="btn btn-info">@Html.ActionLink("Edit", "Edit", new { roleId = @role.Id })</button>
-        </p>
-    }
+    <h1>Roles Listing </h1>
+    <hr />
+
+    <div>
+        @foreach (var role in Model)
+        {
+            <div class="row">
+                <div class="col-sm-3">
+                    <strong>@role.Name</strong>
+                </div>
+                <div class="col-sm-9">
+                    <button class="btn" id="role-button">@Html.ActionLink("Delete", "Delete", new { roleName = @role.Name })</button>
+                    <button class="btn role-button">@Html.ActionLink("Edit", "Edit", new { roleId = @role.Id })</button>
+                </div>
+            </div>
+        }
+    </div>
+
+    <br />
+    <br />
+    @Html.ActionLink("Create Roles", "Create")
+    <br />
+    @Html.ActionLink("Assign User Role", "Assign")
+
 </div>
-
-@Html.ActionLink("Create Roles", "Create")
-@Html.ActionLink("Assign User Role", "Assign")
