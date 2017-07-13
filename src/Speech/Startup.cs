@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Speech.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace Speech
 {
@@ -35,7 +36,7 @@ namespace Speech
                 .AddDefaultTokenProviders();
         }
 
-        public void Configure((IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             var context1 = app.ApplicationServices.GetService<SpeechDbContext>();
             AddTestData(context1);

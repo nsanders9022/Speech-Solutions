@@ -48,24 +48,22 @@
                     
                     <ul class="nav navbar-nav navbar-right">
                         @if (User.Identity.IsAuthenticated)
-                    {
+                         {
                             <li class="nav-link">
                                 @Html.ActionLink("Account Information", "Index", "Profile", new { userName = User.Identity.Name })
                             </li>
                             <li class="nav-link">
                                 @Html.ActionLink("Log out", "LogOff", "Account")
                             </li>
-                    }
-                    else
-                    {
+                        }
+                        else
+                        {
                             <li class="nav-link">@Html.ActionLink("Register", "Register", "Account")</li>
                             <li class="nav-link">@Html.ActionLink("Login", "Login", "Account")</li>
-                    }
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
+                        }
                         @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
                         {
-                            <li>@Html.ActionLink("Admin", "Index", "Admin")</li>
+                            <li class="nav-link">@Html.ActionLink("Admin", "Index", "Admin")</li>
                         }
                     </ul>
                 </div>
