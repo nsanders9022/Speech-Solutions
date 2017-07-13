@@ -1,15 +1,19 @@
 ﻿@{
-    ViewData["Title"] = "Delete ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @model Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRole
 
-<h5>Confirm deletion</h5>
-<div class="well">
-    <h4>Name: @Html.DisplayFor(model => model.Name)</h4>
+<div class="container user-form">
+    <h1>Confirm deletion</h1>
+    <hr />
 
+    <h4><strong>Name: </strong>@Html.DisplayFor(model => model.Name)</h4>
+
+    @using (Html.BeginForm())
+    {
+        <input type="submit" class="btn btn-danger" value="Delete">
+    }
+
+    @Html.ActionLink("Back to Index", "Index")
 </div>
-@using (Html.BeginForm())
-{
-    <input type="submit" class="btn btn-danger" value="Delete">
-}

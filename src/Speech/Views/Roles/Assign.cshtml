@@ -2,58 +2,100 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Manage User Roles</h2>
+<div class="container user-form">
 
-<h2>Role Add to User</h2>
+    <h1>Assign User Roles</h1>
+    <hr />
 
-@using (Html.BeginForm("AddRole", "Roles"))
-{
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true)
+    <p class="assign-role">Add a role to user</p>
 
-    <p>
-        Username : @Html.DropDownList("UserName", "Select User")
-        Role Name: @Html.DropDownList("RoleName", "Select Roles")
-    </p>
-    <input type="submit" value="Save" />
-}
+    <div class="assign-role-div">
+        @using (Html.BeginForm("AddRole", "Roles"))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
 
-<hr />
-<h3>Get Roles for a User</h3>
-@using (Html.BeginForm("GetRoles", "Roles"))
-{
-    @Html.AntiForgeryToken()
-    <p>
-        Username : @Html.DropDownList("UserName", "Select User")
-        <input type="submit" value="Get Roles for this User" />
-    </p>
-}
+                <div class="row">
+                    <div class="col-sm-3">
+                        <label>Username: </label>
+                    </div>
+                    <div class="col-sm-9">
+                        @Html.DropDownList("UserName", "Select User")
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <label>Role name: </label>
+                    </div>
+                    <div class="col-sm-9">
+                        @Html.DropDownList("RoleName", "Select Roles")
+                    </div>
+                </div>
 
-@if (ViewBag.RolesForThisUser != null)
-{
-    <div>
-        <h3>Roles for this user </h3>
-        <ol>
-            @foreach (string s in ViewBag.RolesForThisUser)
-            {
-                <li>@s</li>
-            }
-        </ol>
+            <input type="submit" value="Save" class="btn"/>
+        }
     </div>
-}
 
-<hr />
-<h3>Delete A User from a Role</h3>
 
-@using (Html.BeginForm("DeleteRole", "Roles"))
-{
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true)
+    <p class="assign-role">Get roles for a user</p>
+    <div class="assign-role-div">
+        @using (Html.BeginForm("GetRoles", "Roles"))
+        {
+            @Html.AntiForgeryToken()
 
-    <p>
-        Username : @Html.DropDownList("UserName", "Select User")
-        Role Name: @Html.DropDownList("RoleName", "Select Roles")
-    </p>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label>Username : </label>
+                </div>
+                <div class="col-sm-9">
+                    @Html.DropDownList("UserName", "Select User")
+                </div>
+            </div>
 
-    <input type="submit" value="Delete this user from Role" />
-}
+            <input type="submit" value="Get roles" class="btn" />
+        }
+
+        @if (ViewBag.RolesForThisUser != null)
+        {
+            <div>
+                <h4><strong>Roles for this user</strong></h4>
+                <ol>
+                    @foreach (string s in ViewBag.RolesForThisUser)
+                    {
+                        <li>@s</li>
+                    }
+                </ol>
+            </div>
+        }
+    </div>
+
+    <p class="assign-role">Delete a user from a role</p>
+
+    <div class="assign-role-div">
+        @using (Html.BeginForm("DeleteRole", "Roles"))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <label>Username : </label>
+                </div>
+                <div class="col-sm-9">
+                    @Html.DropDownList("UserName", "Select User")
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <label>Role Name: </label>
+                </div>
+                <div class="col-sm-9">
+                    @Html.DropDownList("RoleName", "Select Roles")
+                </div>
+            </div>
+
+            <input type="submit" value="Delete user from role" class="btn" />
+        }
+    </div>
+</div>

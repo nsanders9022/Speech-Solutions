@@ -4,21 +4,36 @@
 
 @model Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRole
 
-<div class="panel panel-success">
-    <div class="panel-heading">Detail</div>
-    <div class="panel-body">
-        @using (Html.BeginForm())
-        {
-            @Html.AntiForgeryToken()
-            @Html.ValidationSummary(true)
-            @Html.HiddenFor(model => model.Id)
-            <div class="form-group">
+<div class="container user-form">
+    <h1>Edit Role</h1>
+    <hr />
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="row">
+            <div class="col-sm-1">
                 <label>Id:</label>
-                @Html.DisplayFor(model => model.Id)
-                <label>Name:</label>
-                <h4> @Html.TextBoxFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })</h4>
-                <input type="submit" class="btn btn-success" value="Save Edit">
             </div>
-        }
-    </div>
+            <div class="col-sm-11">
+                @Html.DisplayFor(model => model.Id)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1">
+                <label>Name:</label>
+            </div>
+            <div class="col-sm-11">
+               @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <input type="submit" class="btn" value="Save Edit">
+    }
+
+    @Html.ActionLink("Back to Index", "Index")
+
 </div>

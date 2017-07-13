@@ -13,11 +13,15 @@
         @foreach (var role in Model)
         {
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col-sm-4">
+                    <br />
+                    <br />
                     <strong>@role.Name</strong>
                 </div>
-                <div class="col-sm-9">
+                <div class="col-sm-4">
                     <button class="btn" id="role-button">@Html.ActionLink("Delete", "Delete", new { roleName = @role.Name })</button>
+                </div>
+                <div class="col-sm-4">
                     <button class="btn role-button">@Html.ActionLink("Edit", "Edit", new { roleId = @role.Id })</button>
                 </div>
             </div>
@@ -26,8 +30,7 @@
 
     <br />
     <br />
-    @Html.ActionLink("Create Roles", "Create")
-    <br />
-    @Html.ActionLink("Assign User Role", "Assign")
+    <p>@Html.ActionLink("Create new role", "Create")</p>
+    <p>@Html.ActionLink("Assign user role", "Assign")</p>
 
 </div>
