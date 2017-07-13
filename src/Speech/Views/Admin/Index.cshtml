@@ -9,13 +9,13 @@
     <h1>All users</h1>
     <hr />
 
-    <ul>
+    <ol>
         @foreach (var user in Model)
         {
-            <li>@user.UserName</li>
+            <li class="assign-role">@user.UserName</li>
         }
-    </ul>
+    </ol>
 
-    @Html.ActionLink("Role Console", "Index", "Roles")
+    @Html.ActionLink("Role Index", "Index", "Roles")
 
 </div>
