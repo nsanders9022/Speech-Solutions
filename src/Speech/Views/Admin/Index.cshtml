@@ -1,0 +1,17 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<Speech.Models.ApplicationUser>
+
+<h5>All users</h5>
+
+<ul>
+    @foreach (var user in Model)
+    {
+        <li>@user.UserName</li>
+    }
+</ul>
+
+
+@Html.ActionLink("Role Console", "Index", "Roles")
