@@ -62,6 +62,12 @@
                             <li class="nav-link">@Html.ActionLink("Login", "Login", "Account")</li>
                     }
                     </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                        {
+                            <li>@Html.ActionLink("Admin", "Index", "Admin")</li>
+                        }
+                    </ul>
                 </div>
             </div>
         </nav>

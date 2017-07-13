@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Delete ";
+}
+
+@model Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRole
+
+<h5>Confirm deletion</h5>
+<div class="well">
+    <h4>Name: @Html.DisplayFor(model => model.Name)</h4>
+
+</div>
+@using (Html.BeginForm())
+{
+    <input type="submit" class="btn btn-danger" value="Delete">
+}

@@ -35,13 +35,19 @@ namespace Speech
                 .AddDefaultTokenProviders();
         }
 
-        public void Configure(IApplicationBuilder app)
+        public void Configure((IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             var context1 = app.ApplicationServices.GetService<SpeechDbContext>();
             AddTestData(context1);
 
             app.UseStaticFiles();
             app.UseIdentity();
+            loggerFactory.AddConsole();
+
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
