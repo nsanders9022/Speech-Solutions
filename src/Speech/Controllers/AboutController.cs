@@ -14,5 +14,11 @@ namespace Speech.Controllers
         {
             return View();
         }
+
+        // GET: /<controller>/
+        public IActionResult Contact()
+        {
+            return View();
+        }
     }
 }

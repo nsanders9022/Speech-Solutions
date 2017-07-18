@@ -11,19 +11,19 @@
     {
         <div class="row">
             @Html.LabelFor(model=>model.FirstName, "First Name:")
-            @Html.EditorFor(model=>model.FirstName)
+            @Html.EditorFor(model=>model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
         </div>
         <div class="row">
             @Html.LabelFor(model => model.LastName, "Last Name:")
-            @Html.EditorFor(model => model.LastName)
+            @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
         </div>
         <div class="row">
             @Html.LabelFor(model => model.Email, "Email:")
-            @Html.EditorFor(model => model.Email)
+            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
         </div>
         <div class="row">
             @Html.LabelFor(model => model.Comment, "Comments:")
-            @Html.EditorFor(model => model.Comment)
+            @Html.TextAreaFor(model => model.Comment, new { @class = "form-control" })
         </div>
 
         <div class="row">
