@@ -402,6 +402,17 @@ dark blu #2f2989*/
     margin-left: 10%;
 }
 
+
+/*---------------------------------Contact Us---------------------------------*/
+
+
+.validation {
+    color: red;
+    font-weight: bold;
+    float: right;
+}
+
+
 /*---------------------------------Milestone Page---------------------------------*/
 
 .timeline {
