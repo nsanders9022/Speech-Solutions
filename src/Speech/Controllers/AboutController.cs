@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using System.Net;
-//using System.Net.Mail;
 using Speech.Models;
+using Microsoft.AspNetCore.Mvc;
 
 
 namespace Speech.Controllers
@@ -25,11 +23,7 @@ namespace Speech.Controllers
 
         [HttpPost]
         public IActionResult Contact(Contact c)
-        {
-            if (ModelState.IsValid)
-            {
-
-            }
+        {      
             return View();
         }
     }
