@@ -1,0 +1,13 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model Speech.Models.Profile
+
+<div class="contaier">
+    <h1>@Html.DisplayFor(model => model.ClientFirst)</h1>
+    <hr />
+
+    <p>Birth date: @Html.DisplayFor(model => model.DOB)</p>
+
+</div>

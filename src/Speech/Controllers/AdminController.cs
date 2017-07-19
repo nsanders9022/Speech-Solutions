@@ -28,5 +28,11 @@ namespace Speech.Controllers
             var clients = _db.Profiles.ToList();
             return View(clients);
         }
+
+        public IActionResult Details(int id)
+        {
+            var thisClient = _db.Profiles.FirstOrDefault(profiles => profiles.ProfileId == id);
+            return View(thisClient);
+        }
     }
 }
