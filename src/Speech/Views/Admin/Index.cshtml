@@ -10,12 +10,18 @@
     <hr />
 
     <ol>
-        @foreach (var user in Model)
+        @foreach (var user in ViewBag.Users)
         {
             <li class="assign-role">@user.UserName</li>
         }
     </ol>
-
+    <ol>
+        @foreach (var profile in ViewBag.Profiles)
+        {
+            <li class="assign-role">@profile.ClientFirst</li>
+        }
+    </ol>
+   
     @Html.ActionLink("Role Index", "Index", "Roles")
 
 </div>

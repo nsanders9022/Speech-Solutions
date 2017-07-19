@@ -93,39 +93,6 @@
                 </div>
             </div>
         </div>
-
-
-
-        @*<table>
-            <tr>
-                <td class="property">First Name:</td>
-                <td>@Html.DisplayFor(model => model.FirstName)</td>
-            </tr>
-            <tr>
-                <td class="property">Last Name:</td>
-                <td>@Html.DisplayFor(model => model.LastName)</td>
-            </tr>
-            <tr>
-                <td class="property">User Name:</td>
-                <td>@Html.DisplayFor(model => model.UserName)</td>
-            </tr>
-            <tr>
-                <td class="property">Child First Name:</td>
-                <td>@Html.DisplayFor(model => model.ClientFirst)</td>
-            </tr>
-            <tr>
-                <td class="property">Child Last Name:</td>
-                <td>@Html.DisplayFor(model => model.ClientLast)</td>
-            </tr>
-            <tr>
-                <td class="property">Child Date of Birth:</td>
-                <td>@Html.DisplayFor(model => model.DOB)</td>
-            </tr>
-            <tr>
-                <td class="property">Comments:</td>
-                <td>@Html.DisplayFor(model => model.Comment)</td>
-            </tr>
-        </table>*@
     }
 <button class="btn" id="edit-button">@Html.ActionLink("Edit profile information","Edit", new { userName = User.Identity.Name })</button>
 </div>

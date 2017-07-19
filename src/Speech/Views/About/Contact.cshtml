@@ -2,12 +2,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@model Speech.Models.Contact
+@using Speech.ViewModels
+@model ContactViewModel
 
 <div class="container user-form">
     <h1>Contact Us</h1>
     <hr />
-    @using (Html.BeginForm())
+    @using (Html.BeginForm("Contact", "About", FormMethod.Post))
     {
         @Html.ValidationSummary(true)
         <div class="row">
@@ -35,8 +36,8 @@
         </div>
 
         <div class="row">
-            <input type="submit" vlaue="submit" class="btn"/>
-            <input type="reset" vlaue="reset" class="btn"/>
+            <input type="submit" value="Contact" class="btn"/>
+            <input type="reset" value="Reset" class="btn"/>
         </div>
     }
 </div>
