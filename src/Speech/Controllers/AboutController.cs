@@ -15,8 +15,6 @@ using Microsoft.AspNetCore.Authorization;
 using MimeKit;
 using MailKit.Net.Smtp;
 using MailKit.Security;
-//using FluentEmail.Core;
-//using FluentEmail.Mailgun;
 
 
 

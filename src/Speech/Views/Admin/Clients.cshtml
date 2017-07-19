@@ -1,0 +1,19 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<Speech.Models.Profile>
+
+<div class="container user-form">
+
+    <h1>All Clients</h1>
+    <hr />
+
+    <ol>
+        @foreach (var client in Model)
+        {
+            <li class="assign-role">@client.ClientFirst</li>
+        }
+    </ol>
+
+</div>

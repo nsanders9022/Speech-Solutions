@@ -1,8 +1,5 @@
-﻿{
+{
   "dependencies": {
-    "FluentEmail.Core": "2.1.0",
-    "FluentEmail.Mailgun": "2.1.0",
-    "FluentEmail.Razor": "2.1.0",
     "Microsoft.AspNetCore.Authentication.Cookies": "1.0.0",
     "Microsoft.AspNetCore.Diagnostics": "1.0.0",
     "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "1.0.0",
@@ -27,8 +24,7 @@
       "version": "1.0.1",
       "type": "platform"
     },
-    "NETCore.MailKit": "1.0.0",
-    "RazorLight": "1.1.0"
+    "NETCore.MailKit": "1.0.0"
   },
 
   "tools": {
