@@ -14,7 +14,11 @@ namespace Speech.Models
     {
         [Key]
         public int GoalId { get; set; }
+        [Required]
         public string Description { get; set; }
+        [Required]
+        public bool Completed { get; set; }
+        [Required]
         public int ProfileId { get; set; }
         public virtual Profile Profile { get; set; }
 

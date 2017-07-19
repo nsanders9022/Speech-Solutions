@@ -14,6 +14,7 @@
         <h4><span class="property">Parent first name:</span></h4>
         <h4><span class="property">Parent last name:</span></h4>
         <h4><span class="property">Parent comment:</span></h4>
+        <h4><span class="property">Goals:</span></h4>
 
     </div>
     <div class="col-sm-9">
@@ -23,6 +24,19 @@
         <h4> @Html.DisplayFor(model => model.FirstName)</h4>
         <h4> @Html.DisplayFor(model => model.LastName)</h4>
         <h4> @Html.DisplayFor(model => model.Comment)</h4>
+        <h4>
+            @if (Model.Goals.Count > 0)
+            {
+                @foreach (var goal in Model.Goals)
+                {
+                    <p>Goal: @goal.Description | Completed: @goal.Completed</p>
+                }
+            }
+            else 
+            {
+                <p>No goals have been added yet</p>
+            }
+        </h4>
     </div>
 
     <p>@Html.ActionLink("Back to client list", "Clients", "Admin")</p>

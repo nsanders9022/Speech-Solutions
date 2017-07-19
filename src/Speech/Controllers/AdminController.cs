@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Speech.Models;
-
+using Microsoft.EntityFrameworkCore;
 
 namespace Speech.Controllers
 {
@@ -31,7 +31,7 @@ namespace Speech.Controllers
 
         public IActionResult Details(int id)
         {
-            var thisClient = _db.Profiles.FirstOrDefault(profiles => profiles.ProfileId == id);
+            var thisClient = _db.Profiles.Include(profiles => profiles.Goals).FirstOrDefault(profiles => profiles.ProfileId == id);
             return View(thisClient);
         }
     }
