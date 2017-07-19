@@ -27,7 +27,6 @@ namespace Speech.Controllers
 
         private SpeechDbContext db = new SpeechDbContext();
 
-        // GET: /<controller>/
         public IActionResult Index()
         {
             return View();
@@ -39,7 +38,7 @@ namespace Speech.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Contact(ContactViewModel c)
+        public async Task<IActionResult> Contact(Contact c)
         {
 
             var emailMessage = new MimeMessage();
@@ -49,7 +48,8 @@ namespace Speech.Controllers
             emailMessage.Subject = "Contact Form Submission";
             emailMessage.Body = new TextPart("html")
             {
-                Text = c.Comment + " " + c.Email
+                Text = string.Format("A comment was posted from the website. <br> Comment: " + c.Comment + "<br> Sender Name: " + c.FirstName + " " + c.LastName + "<br>Sender email address: " + c.Email + ".")
+
             };
 
             Console.WriteLine(c.FirstName + " " + c.Email + " " + c.Comment);
@@ -62,23 +62,14 @@ namespace Speech.Controllers
                 await client.DisconnectAsync(true).ConfigureAwait(false);
             };
 
-            //db.Contacts.Add(c);
-            //db.SaveChanges();
+            db.Contacts.Add(c);
+            db.SaveChanges();
             return RedirectToAction("Success", "About");
+        }
 
-
-                //var email = Email
-                //    .From(c.Email)
-                //    .To("speechsolutions2@gmail.com")
-                //    .Subject("Comment from Form" + c.Email)
-                //    .Body(c.Comment);
-
-                //Email.DefaultSender = new MailgunSender("gmail.com",);
-
-                //email.Send();
-                ////await email.SendAsync();
-
-
+        public IActionResult Success()
+        {
+            return View();
         }
     }
 }
