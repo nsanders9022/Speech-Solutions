@@ -10,15 +10,9 @@
     <hr />
 
     <ol>
-        @foreach (var user in ViewBag.Users)
+        @foreach (var user in Model)
         {
             <li class="assign-role">@user.UserName</li>
-        }
-    </ol>
-    <ol>
-        @foreach (var profile in ViewBag.Profiles)
-        {
-            <li class="assign-role">@profile.ClientFirst</li>
         }
     </ol>
    

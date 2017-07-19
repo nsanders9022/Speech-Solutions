@@ -44,13 +44,15 @@ namespace Speech.Controllers
 
             var emailMessage = new MimeMessage();
 
-            emailMessage.To.Add(new MailboxAddress(c.FirstName, c.Email));
-            emailMessage.From.Add(new MailboxAddress("Nicole Sanders", "speechsolutions2@gmail.com"));
+            emailMessage.From.Add(new MailboxAddress(c.FirstName, c.Email));
+            emailMessage.To.Add(new MailboxAddress("Nicole Sanders", "speechsolutions2@gmail.com"));
             emailMessage.Subject = "Contact Form Submission";
-            emailMessage.Body = new TextPart("string")
+            emailMessage.Body = new TextPart("html")
             {
                 Text = c.Comment + " " + c.Email
             };
+
+            Console.WriteLine(c.FirstName + " " + c.Email + " " + c.Comment);
 
             using (var client = new SmtpClient())
             {
