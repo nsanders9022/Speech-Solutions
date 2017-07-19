@@ -4,10 +4,26 @@
 
 @model Speech.Models.Profile
 
-<div class="contaier">
+<div class="container">
     <h1>@Html.DisplayFor(model => model.ClientFirst)</h1>
     <hr />
+    <div class="col-sm-3">
+        <h4><span class="property">First name:</span></h4>
+        <h4><span class="property">Last name:</span></h4>
+        <h4><span class="property">Birthdate:</span></h4>
+        <h4><span class="property">Parent first name:</span></h4>
+        <h4><span class="property">Parent last name:</span></h4>
+        <h4><span class="property">Parent comment:</span></h4>
 
-    <p>Birth date: @Html.DisplayFor(model => model.DOB)</p>
+    </div>
+    <div class="col-sm-9">
+        <h4> @Html.DisplayFor(model => model.ClientFirst)</h4>
+        <h4> @Html.DisplayFor(model => model.ClientLast)</h4>
+        <h4> @Html.DisplayFor(model => model.DOB)</h4>
+        <h4> @Html.DisplayFor(model => model.FirstName)</h4>
+        <h4> @Html.DisplayFor(model => model.LastName)</h4>
+        <h4> @Html.DisplayFor(model => model.Comment)</h4>
+
+    </div>
 
 </div>
