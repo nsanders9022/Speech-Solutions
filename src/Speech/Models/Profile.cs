@@ -24,5 +24,6 @@ namespace Speech.Models
         public string ClientLast { get; set; }
         public string ApplicationUserId { get; set; }
         public virtual ApplicationUser ApplicationUser { get; set; }
+        public virtual ICollection<Goal> Goals { get; set; }
     }
 }

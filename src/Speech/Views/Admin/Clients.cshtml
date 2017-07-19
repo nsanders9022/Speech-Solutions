@@ -12,7 +12,7 @@
     <ol>
         @foreach (var client in Model)
         {
-            <li class="assign-role">@Html.ActionLink((string)client.ClientFirst, "Details", new { id = client.ProfileId })</li>
+            <li class="assign-role">@Html.ActionLink((string)client.ClientFirst + " " + client.ClientLast, "Details", new { id = client.ProfileId })</li>
         }
     </ol>
 

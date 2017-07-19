@@ -8,9 +8,10 @@ using Speech.Models;
 namespace Speech.Migrations
 {
     [DbContext(typeof(SpeechDbContext))]
-    partial class SpeechDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170719210844_AddGoalsTable")]
+    partial class AddGoalsTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")
@@ -201,11 +202,7 @@ namespace Speech.Migrations
 
                     b.Property<string>("Description");
 
-                    b.Property<int>("ProfileId");
-
                     b.HasKey("GoalId");
-
-                    b.HasIndex("ProfileId");
 
                     b.ToTable("Goals");
                 });
@@ -287,14 +284,6 @@ namespace Speech.Migrations
                     b.HasOne("Speech.Models.ApplicationUser")
                         .WithMany("Roles")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("Speech.Models.Goal", b =>
-                {
-                    b.HasOne("Speech.Models.Profile", "Profile")
-                        .WithMany("Goals")
-                        .HasForeignKey("ProfileId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

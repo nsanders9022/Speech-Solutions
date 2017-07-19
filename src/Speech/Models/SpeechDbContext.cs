@@ -16,6 +16,7 @@ namespace Speech.Models
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Profile> Profiles { get; set; }
         public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Goal> Goals { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
