@@ -50,5 +50,14 @@ namespace Speech.Controllers
             _db.SaveChanges();
             return RedirectToAction("Clients");
         }
+
+        public IActionResult Complete(int id)
+        {
+            var thisGoal = _db.Goals.FirstOrDefault(goals => goals.GoalId == id);
+            thisGoal.Completed = true;
+            _db.Entry(thisGoal).State = EntityState.Modified;
+            _db.SaveChanges();
+            return View(thisGoal);
+        }
     }
 }

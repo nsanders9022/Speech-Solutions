@@ -6,7 +6,7 @@
 @model Speech.Models.Goal
 
 
-<div class="container">
+<div class="container user-form">
     <h1>Create a goal for a client</h1>
     <hr />
 
@@ -20,4 +20,6 @@
 
         <input type="submit" value="Create" class="btn" />
     }
+
+    <p>@Html.ActionLink("Back to Client Index", "Clients", "Admin")</p>
 </div>

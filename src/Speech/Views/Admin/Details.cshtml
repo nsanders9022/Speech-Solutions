@@ -8,28 +8,39 @@
     <h1>@Html.DisplayFor(model => model.ClientFirst)</h1>
     <hr />
     <div class="col-sm-3">
-        <h4><span class="property">First name:</span></h4>
-        <h4><span class="property">Last name:</span></h4>
+        <h4><span class="property">Name:</span></h4>
         <h4><span class="property">Birthdate:</span></h4>
-        <h4><span class="property">Parent first name:</span></h4>
-        <h4><span class="property">Parent last name:</span></h4>
+        <h4><span class="property">Parent name:</span></h4>
         <h4><span class="property">Parent comment:</span></h4>
         <h4><span class="property">Goals:</span></h4>
 
     </div>
     <div class="col-sm-9">
-        <h4> @Html.DisplayFor(model => model.ClientFirst)</h4>
-        <h4> @Html.DisplayFor(model => model.ClientLast)</h4>
+        <h4> @Html.DisplayFor(model => model.ClientFirst) @Html.DisplayFor(model => model.ClientLast)</h4>
         <h4> @Html.DisplayFor(model => model.DOB)</h4>
-        <h4> @Html.DisplayFor(model => model.FirstName)</h4>
-        <h4> @Html.DisplayFor(model => model.LastName)</h4>
+        <h4> @Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model.LastName)</h4>
         <h4> @Html.DisplayFor(model => model.Comment)</h4>
         <h4>
             @if (Model.Goals.Count > 0)
             {
                 @foreach (var goal in Model.Goals)
                 {
-                    <p>Goal: @goal.Description | Completed: @goal.Completed</p>
+                    <ul>
+                        <li>Goal: @goal.Description </li>
+                        @if (goal.Completed == false)
+                        {
+                            <div id="completed-goal-@goal.GoalId">
+                                <li><span class="property">Completion status: </span>This goal has not been met yet. <span class="complete" id="@goal.GoalId">Mark this goal as met</span></li>
+                            </div>
+
+                        }
+                        else
+                        {
+                            <li><span class="property">Completion status: </span>This goal has been met.</li>
+
+                        }
+
+                    </ul>
                 }
             }
             else 
@@ -40,5 +51,6 @@
     </div>
 
     <p>@Html.ActionLink("Back to client list", "Clients", "Admin")</p>
+    <p>@Html.ActionLink("Create a goal", "Create", "Admin")</p>
 
 </div>
