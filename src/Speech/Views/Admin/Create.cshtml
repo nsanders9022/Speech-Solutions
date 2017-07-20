@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@model Speech.Models.Goal
+
+
+<div class="container">
+    <h1>Create a goal for a client</h1>
+    <hr />
+
+    @using (Html.BeginForm())
+    {
+        @Html.LabelFor(model => model.Description)
+        @Html.EditorFor(model => model.Description)
+
+        <label>Client</label>
+        @Html.DropDownList("ProfileId")
+
+        <input type="submit" value="Create" class="btn" />
+    }
+</div>

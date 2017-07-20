@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Speech.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Speech.Controllers
 {
@@ -33,6 +34,21 @@ namespace Speech.Controllers
         {
             var thisClient = _db.Profiles.Include(profiles => profiles.Goals).FirstOrDefault(profiles => profiles.ProfileId == id);
             return View(thisClient);
+        }
+
+        public IActionResult Create()
+        {
+            ViewBag.ProfileId = new SelectList(_db.Profiles, "ProfileId", "ClientFirst");
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Goal goal)
+        {
+            goal.Completed = false;
+            _db.Goals.Add(goal);
+            _db.SaveChanges();
+            return RedirectToAction("Clients");
         }
     }
 }
