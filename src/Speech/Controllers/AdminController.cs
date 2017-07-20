@@ -26,13 +26,14 @@ namespace Speech.Controllers
 
         public IActionResult Clients()
         {
-            var clients = _db.Profiles.ToList();
+            var clients = _db.Profiles.Include(goals => goals.Goals).ToList();
             return View(clients);
         }
 
         public IActionResult Details(int id)
         {
             var thisClient = _db.Profiles.Include(profiles => profiles.Goals).FirstOrDefault(profiles => profiles.ProfileId == id);
+            Console.WriteLine(id);
             return View(thisClient);
         }
 

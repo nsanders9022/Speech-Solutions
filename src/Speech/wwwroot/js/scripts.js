@@ -66,7 +66,7 @@
         var route = '#completed-goal-' + this.id;
         $.ajax({
             type: 'GET',
-            url: 'Admin/Complete/' + this.id,
+            url: '../Complete/' + this.id,
             success: function (result) {
                 $(route).html(result);
             }
