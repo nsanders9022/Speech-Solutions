@@ -89,43 +89,7 @@
                     <h4>@Html.DisplayFor(model => model.Comment)</h4>
                 </div>
             </div>
-            <hr />
-            <div class="row">
-                <h4><span class="property">Goals for @Html.DisplayFor(model => model.ClientFirst):</span></h4>
-                @if (Model.Goals.Count > 0)
-                {
-                    <div class="col-sm-6">
-                        <h5>Goals in progress:</h5>
-
-                        @foreach (var goal in Model.Goals)
-                        {
-                            @if (goal.Completed == false)
-                            {
-                                <li>@goal.Description</li>
-                            }
-                        }
-                    </div>
-
-                    <div class="col-sm-6">
-                        <h5>Goals that have been met:</h5>
-                        @foreach (var goal in Model.Goals)
-                        {
-                            @if (goal.Completed == true)
-                            {
-                                <li>@goal.Description</li>
-                            }
-                        }
-                    </div>
-                }
-                else
-                {
-                    <p>No goals have been added yet by the therapist.</p>
-
-                }
-            </div>
-
-
         </div>
+        <button class="btn" id="edit-button">@Html.ActionLink("Edit profile information","Edit", new { userName = User.Identity.Name })</button>
     }
-<button class="btn" id="edit-button">@Html.ActionLink("Edit profile information","Edit", new { userName = User.Identity.Name })</button>
 </div>

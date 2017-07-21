@@ -1,0 +1,50 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using System.Security.Claims
+
+@model Speech.Models.Profile
+
+
+<div class="container">
+    @if (User.Identity.IsAuthenticated)
+    {
+
+        <h1>View @Html.DisplayFor(model => model.FirstName)'s Progress</h1>
+        <hr />
+
+        <div class="row">
+            @*<h4><span class="property">Goals for @Html.DisplayFor(model => model.ClientFirst):</span></h4>*@
+            @if (Model.Goals.Count > 0)
+            {
+                <div class="col-sm-6">
+                    <h2>Goals in progress:</h2>
+
+                    @foreach (var goal in Model.Goals)
+                    {
+                        @if (goal.Completed == false)
+                        {
+                            <li class="goal-list">@goal.Description</li>
+                        }
+                    }
+                </div>
+
+                <div class="col-sm-6">
+                    <h2>Goals that have been met:</h2>
+                    @foreach (var goal in Model.Goals)
+                    {
+                        @if (goal.Completed == true)
+                        {
+                            <li class="goal-list">@goal.Description</li>
+                        }
+                    }
+                </div>
+            }
+            else
+            {
+                <p>No goals have been added yet by the therapist.</p>
+            }
+        </div>
+    }
+</div>

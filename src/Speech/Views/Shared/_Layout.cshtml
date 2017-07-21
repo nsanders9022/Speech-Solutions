@@ -53,7 +53,10 @@
                         @if (User.Identity.IsAuthenticated && !User.IsInRole("Admin"))
                          {
                             <li class="nav-link">
-                                @Html.ActionLink("Account Information", "Index", "Profile", new { userName = User.Identity.Name })
+                                @Html.ActionLink("Progress", "Progress", "Profile", new { userName = User.Identity.Name })
+                            </li>
+                            <li class="nav-link">
+                                @Html.ActionLink("Account Info", "Index", "Profile", new { userName = User.Identity.Name })
                             </li>
                         }
                         else if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))

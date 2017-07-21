@@ -13,7 +13,7 @@ namespace Speech.Controllers
         private SpeechDbContext db = new SpeechDbContext();
         public IActionResult Index(string userName)
         {
-            var thisUser = db.Profiles.Include(profiles => profiles.Goals).FirstOrDefault(profiles => profiles.UserName == userName);
+            var thisUser = db.Profiles.FirstOrDefault(profiles => profiles.UserName == userName);
             return View(thisUser);
         }
 
@@ -31,7 +31,12 @@ namespace Speech.Controllers
 
             db.SaveChanges();
             return RedirectToAction("Index", new { userName = thisUser.UserName });
-            
+        }
+
+        public IActionResult Progress(string userName)
+        {
+            var thisUser = db.Profiles.Include(profiles => profiles.Goals).FirstOrDefault(profiles => profiles.UserName == userName);
+            return View(thisUser);
         }
     }
 }
