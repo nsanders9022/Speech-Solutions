@@ -22,20 +22,45 @@
     });
 
     // Show process text when hover over image
-    $("img#schedule-img").hover(function () {
-        $("div.schedule").toggle();
+    $("img#schedule-img").click(function () {
+        $("div.consultation").hide();
+        $("div.evaluation").hide();
+        $("div.recommendations").hide();
+        $("div.sessions").hide();
+        $("div.instruction").hide();
+        $("div.schedule").show();
     })
-    $("img#consultation-img").hover(function () {
-        $("div.consultation").toggle();
+    $("img#consultation-img").click(function () {
+        $("div.schedule").hide();
+        $("div.evaluation").hide();
+        $("div.recommendations").hide();
+        $("div.sessions").hide();
+        $("div.instruction").hide();
+        $("div.consultation").show();
     })
-    $("img#eval-img").hover(function () {
-        $("div.evaluation").toggle();
+    $("img#eval-img").click(function () {
+        $("div.schedule").hide();
+        $("div.consultation").hide();
+        $("div.recommendations").hide();
+        $("div.sessions").hide();
+        $("div.instruction").hide();
+        $("div.evaluation").show();
     })
-    $("img#recommendations-img").hover(function () {
-        $("div.recommendations").toggle();
+    $("img#recommendations-img").click(function () {
+        $("div.schedule").hide();
+        $("div.consultation").hide();
+        $("div.evaluation").hide();
+        $("div.sessions").hide();
+        $("div.instruction").hide();
+        $("div.recommendations").show();
     })
-    $("img#sessions-img").hover(function () {
-        $("div.sessions").toggle();
+    $("img#sessions-img").click(function () {
+        $("div.schedule").hide();
+        $("div.consultation").hide();
+        $("div.evaluation").hide();
+        $("div.recommendations").hide();
+        $("div.instruction").hide();
+        $("div.sessions").show();
     })
 
 

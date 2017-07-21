@@ -242,6 +242,11 @@ h3 {
     margin-right: 15px;
 }
 
+.process-icon:hover {
+    cursor: pointer;
+
+}
+
 .step {
     display: none;  
     padding-left: 25%;
