@@ -35,7 +35,7 @@ namespace Speech.Controllers
 
         public IActionResult Progress(string userName)
         {
-            var thisUser = db.Profiles.Include(profiles => profiles.Goals).FirstOrDefault(profiles => profiles.UserName == userName);
+            var thisUser = db.Profiles.Include(profiles => profiles.Goals).Include(profiles => profiles.Notes).FirstOrDefault(profiles => profiles.UserName == userName);
             return View(thisUser);
         }
     }

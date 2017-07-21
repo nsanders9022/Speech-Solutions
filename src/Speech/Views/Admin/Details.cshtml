@@ -39,66 +39,86 @@
             <h4> @Html.DisplayFor(model => model.Comment)</h4>
         </div>
     </div>
+
     <div class="row">
         <div class="col-sm-3">
             <h4><span class="property">Goals:</span></h4>
         </div>
         <div class="col-sm-9">
-        
-                @if (Model.Goals.Count > 0)
+
+            @if (Model.Goals.Count > 0)
+            {
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h4><span class="property">Description:</span></h4>
+                        <hr />
+                    </div>
+                    <div class="col-sm-6">
+                        <h4><span class="property">Status:</span></h4>
+                        <hr />
+                    </div>
+                </div>
+
+                @foreach (var goal in Model.Goals)
                 {
 
                     <div class="row">
                         <div class="col-sm-6">
-                            <h4><span class="property">Description:</span></h4>
-                            <hr />
+                            <h4>@goal.Description</h4>
                         </div>
                         <div class="col-sm-6">
-                            <h4><span class="property">Status:</span></h4>
-                            <hr />
+                            @if (goal.Completed == false)
+                            {
+                                <div id="completed-goal-@goal.GoalId">
+
+                                    <h4>
+                                        This goal has not been met yet.
+                                        <button class="complete" id="@goal.GoalId">Mark this goal as met</button>
+                                    </h4>
+                                </div>
+                            }
+                            else
+                            {
+                                <h4>This goal has been met.</h4>
+
+                            }
                         </div>
-                    </div> 
-
-
-
-                    @foreach (var goal in Model.Goals)
-                    {
-
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <h4>@goal.Description</h4>
-                            </div>
-                            <div class="col-sm-6">
-                                @if (goal.Completed == false)
-                                {
-                                    <div id="completed-goal-@goal.GoalId">
-                                   
-                                            <h4>This goal has not been met yet.
-                                                <button class="complete" id="@goal.GoalId">Mark this goal as met</button>
-                                            </h4>
-                                    </div>
-                                }
-                                else
-                                {
-                                    <h4>This goal has been met.</h4>
-
-                                }
-                            </div>
-                        </div>
-                    }
+                    </div>
                 }
-                else 
-                {
-                    <p>No goals have been added yet</p>
-                }
-         
-
-
+            }
+            else
+            {
+                <h4>No goals have been added yet</h4>
+            }
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-sm-3">
+            <h4><span class="property">Notes:</span></h4>
+        </div>
+        <div class="col-sm-9">
+
+            @if (Model.Notes.Count > 0)
+            {
+                @foreach (var note in Model.Notes)
+                {
+
+                    <h4>@note.Description</h4>
+                }
+            }
+            else
+            {
+                <h4>No notes have been written yet.</h4>
+            }
+        </div>
+    </div>
+
 
     <br />
     <p>@Html.ActionLink("Back to client list", "Clients", "Admin")</p>
     <p>@Html.ActionLink("Create a goal", "Create", "Admin")</p>
+    <p>@Html.ActionLink("Write a note for a client", "CreateNote", "Admin")</p>
 
 </div>

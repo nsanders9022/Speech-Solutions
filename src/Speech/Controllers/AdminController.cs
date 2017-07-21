@@ -26,13 +26,13 @@ namespace Speech.Controllers
 
         public IActionResult Clients()
         {
-            var clients = _db.Profiles.Include(goals => goals.Goals).ToList();
+            var clients = _db.Profiles.Include(goals => goals.Goals).Include(notes => notes.Notes).ToList();
             return View(clients);
         }
 
         public IActionResult Details(int id)
         {
-            var thisClient = _db.Profiles.Include(profiles => profiles.Goals).FirstOrDefault(profiles => profiles.ProfileId == id);
+            var thisClient = _db.Profiles.Include(profiles => profiles.Goals).Include(profiles => profiles.Notes).FirstOrDefault(profiles => profiles.ProfileId == id);
             Console.WriteLine(id);
             return View(thisClient);
         }
@@ -59,6 +59,20 @@ namespace Speech.Controllers
             _db.Entry(thisGoal).State = EntityState.Modified;
             _db.SaveChanges();
             return View(thisGoal);
+        }
+
+        public IActionResult CreateNote()
+        {
+            ViewBag.ProfileId = new SelectList(_db.Profiles, "ProfileId", "ClientFirst");
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CreateNote(Note note)
+        {
+            _db.Notes.Add(note);
+            _db.SaveChanges();
+            return RedirectToAction("Clients");
         }
     }
 }

@@ -15,11 +15,12 @@
         <hr />
 
         <div class="row">
-            @*<h4><span class="property">Goals for @Html.DisplayFor(model => model.ClientFirst):</span></h4>*@
+            <h2>Goals:</h2>
             @if (Model.Goals.Count > 0)
             {
                 <div class="col-sm-6">
-                    <h2>Goals in progress:</h2>
+                    <h4>Goals in progress:</h4>
+                    <hr />
 
                     @foreach (var goal in Model.Goals)
                     {
@@ -31,7 +32,8 @@
                 </div>
 
                 <div class="col-sm-6">
-                    <h2>Goals that have been met:</h2>
+                    <h4>Goals that have been met:</h4>
+                    <hr />
                     @foreach (var goal in Model.Goals)
                     {
                         @if (goal.Completed == true)
@@ -43,8 +45,28 @@
             }
             else
             {
-                <p>No goals have been added yet by the therapist.</p>
+                <p class="goal-list">No goals have been added yet by the therapist.</p>
             }
+        </div>
+
+        <div class="row">
+          
+            <h2>Notes:</h2>
+            @if (Model.Notes.Count > 0)
+            {
+
+                @foreach (var note in Model.Notes)
+                {
+                    <li class="goal-list">@note.Description</li>
+                }
+
+            }
+            else
+            {
+                <li class="goal-list">No notes have been added yet by the therapist.</li>
+            }
+          
+            
         </div>
     }
 </div>

@@ -25,5 +25,6 @@ namespace Speech.Models
         public string ApplicationUserId { get; set; }
         public virtual ApplicationUser ApplicationUser { get; set; }
         public virtual ICollection<Goal> Goals { get; set; }
+        public virtual ICollection<Note> Notes { get; set; }
     }
 }

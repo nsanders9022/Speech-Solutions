@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@model Speech.Models.Note
+
+
+<div class="container user-form">
+    <h1>Write a note for a client</h1>
+    <hr />
+
+    @using (Html.BeginForm())
+    {
+        <div class="row">
+            <div class="col-sm-3">
+                <label>Client: </label>
+            </div>
+            <div class="col-sm-9">
+                @Html.DropDownList("ProfileId")
+            </div>
+        </div>
+
+        @Html.LabelFor(model => model.Description)
+        @Html.TextAreaFor(model => model.Description, new { @class = "form-control" })
+
+        <button type="submit" class="btn">Add note</button>
+    }
+
+    <p>@Html.ActionLink("Back to Client Index", "Clients", "Admin")</p>
+</div>
