@@ -13,12 +13,14 @@
     @using (Html.BeginForm())
     {
         @Html.LabelFor(model => model.Description)
-        @Html.EditorFor(model => model.Description)
+        @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
 
         <label>Client</label>
+        <br />
         @Html.DropDownList("ProfileId")
 
-        <input type="submit" value="Create" class="btn" />
+        <br />
+        <button type="submit" class="btn">Create</button>
     }
 
     <p>@Html.ActionLink("Back to Client Index", "Clients", "Admin")</p>

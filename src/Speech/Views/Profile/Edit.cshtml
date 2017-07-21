@@ -39,10 +39,11 @@
         <label>Comment</label>
         @Html.EditorFor(model => model.Comment, new { htmlAttributes = new { @class = "form-control" } })
 
+        <input type="submit" class="btn" value="Save" />
+        
         <br />
         <p>@Html.ActionLink("Back to profile information", "Index", new { userName = User.Identity.Name }, new { id = Model.ProfileId })</p>
         
-        <input type="submit" class="btn" value="Save" />
     }
 
  </div>
