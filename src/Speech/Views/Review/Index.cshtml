@@ -21,7 +21,7 @@
     </div>
 
     <div class="container reviews-page-button">
-        @if (User.Identity.IsAuthenticated)
+        @if (User.Identity.IsAuthenticated && !User.IsInRole("Admin"))
         {
             <button type="submit" class="btn">@Html.ActionLink("Add a review", "Create", "Review")</button>
         }

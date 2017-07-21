@@ -38,8 +38,8 @@ namespace Speech
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            var context1 = app.ApplicationServices.GetService<SpeechDbContext>();
-            AddTestData(context1);
+            //var context1 = app.ApplicationServices.GetService<SpeechDbContext>();
+            //AddTestData(context1);
 
             app.UseStaticFiles();
             app.UseIdentity();
@@ -61,35 +61,35 @@ namespace Speech
             });
         }
 
-        public static void AddTestData(SpeechDbContext context1)
-        {
-            context1.Database.ExecuteSqlCommand("Delete From Reviews");
+        //public static void AddTestData(SpeechDbContext context1)
+        //{
+        //    context1.Database.ExecuteSqlCommand("Delete From Reviews");
 
-            var content1 = new Models.Review
-            {
-                Name = "Rachel",
-                Description = "This was the best thing I could have ever done for my son Liam. Asides from correcting his speech impediment, his confidence shot through the roof and he always had such a blast."
-            };
+        //    var content1 = new Models.Review
+        //    {
+        //        Name = "Rachel",
+        //        Description = "This was the best thing I could have ever done for my son Liam. Asides from correcting his speech impediment, his confidence shot through the roof and he always had such a blast."
+        //    };
 
-            context1.Reviews.Add(content1);
+        //    context1.Reviews.Add(content1);
 
-            var content2 = new Models.Review
-            {
-                Name = "Kristen",
-                Description = "I cannot put into words how thankful I am for Dayna and Speech Solutions. As my family and I live in a mountainous area of the PNW we do not have easy access to many services like this, but the online option was fantastic and greatly improved my son's life."
-            };
+        //    var content2 = new Models.Review
+        //    {
+        //        Name = "Kristen",
+        //        Description = "I cannot put into words how thankful I am for Dayna and Speech Solutions. As my family and I live in a mountainous area of the PNW we do not have easy access to many services like this, but the online option was fantastic and greatly improved my son's life."
+        //    };
 
-            context1.Reviews.Add(content2);
+        //    context1.Reviews.Add(content2);
 
-            var content3 = new Models.Review
-            {
-                Name = "Sean",
-                Description = "This is great. My daughter made so much progress and I definitely recommend it."
-            };
+        //    var content3 = new Models.Review
+        //    {
+        //        Name = "Sean",
+        //        Description = "This is great. My daughter made so much progress and I definitely recommend it."
+        //    };
 
-            context1.Reviews.Add(content3);
+        //    context1.Reviews.Add(content3);
 
-            context1.SaveChanges();
-        }
+        //    context1.SaveChanges();
+        //}
     }
 }
