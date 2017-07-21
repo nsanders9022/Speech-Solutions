@@ -13,8 +13,7 @@ namespace Speech.Controllers
         private SpeechDbContext db = new SpeechDbContext();
         public IActionResult Index(string userName)
         {
-            var thisUser = db.Profiles.FirstOrDefault(profiles => profiles.UserName == userName);
-            Console.WriteLine("user name " + thisUser.UserName);
+            var thisUser = db.Profiles.Include(profiles => profiles.Goals).FirstOrDefault(profiles => profiles.UserName == userName);
             return View(thisUser);
         }
 
