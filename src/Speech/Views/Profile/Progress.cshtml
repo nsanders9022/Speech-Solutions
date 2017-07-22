@@ -59,23 +59,25 @@
         <div class="row">
           
             <h2>Notes:</h2>
-            <div class="col-sm-12">
                 @if (Model.Notes.Count > 0)
                 {
+                    <div class="row">
+                        @foreach (var note in Model.Notes)
+                        {
+                            <div class="col-sm-2">
+                                <h5>@note.Date</h5>
+                            </div>
+                            <div class="col-sm-10">
+                                <li class="goal-list">@note.Description</li>
+                            </div>
 
-                    @foreach (var note in Model.Notes)
-                    {
-                        <li class="goal-list">@note.Description</li>
-                        <li>@note.Date</li>
-                    }
-
+                        }
+                    </div>
                 }
                 else
                 {
                     <li class="goal-list">No notes have been added yet by the therapist.</li>
                 }
-            </div>
-            
         </div>
     }
-</div>
+ </div>
