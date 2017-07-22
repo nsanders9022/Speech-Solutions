@@ -70,6 +70,7 @@ namespace Speech.Controllers
         [HttpPost]
         public IActionResult CreateNote(Note note)
         {
+            note.Date = DateTime.Now;
             _db.Notes.Add(note);
             _db.SaveChanges();
             return RedirectToAction("Clients");

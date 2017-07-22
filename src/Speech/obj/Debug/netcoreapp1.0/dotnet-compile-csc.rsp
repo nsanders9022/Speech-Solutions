@@ -229,6 +229,8 @@
 "C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170719214211_UpdateGoals.Designer.cs"
 "C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170721231220_AddNotesTable.cs"
 "C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170721231220_AddNotesTable.Designer.cs"
+"C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170722002528_DateToNotes.cs"
+"C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\20170722002528_DateToNotes.Designer.cs"
 "C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Migrations\SpeechDbContextModelSnapshot.cs"
 "C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Models\ApplicationUser.cs"
 "C:\Users\Nicole Laptop\Desktop\Speech\src\Speech\Models\Contact.cs"
