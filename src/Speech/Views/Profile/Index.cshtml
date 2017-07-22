@@ -89,7 +89,7 @@
                     <h4>@Html.DisplayFor(model => model.Comment)</h4>
                 </div>
             </div>
+        <button class="btn" id="edit-button">@Html.ActionLink("Edit information","Edit", new { userName = User.Identity.Name })</button>
         </div>
-        <button class="btn" id="edit-button">@Html.ActionLink("Edit info","Edit", new { userName = User.Identity.Name })</button>
     }
 </div>
