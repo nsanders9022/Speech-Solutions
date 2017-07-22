@@ -430,6 +430,14 @@ dark blu #2f2989*/
     padding-top: 5%;
 }
 
+.not-met {
+    color: red;
+}
+
+.met {
+    color: green;
+}
+
 
 /*---------------------------------Milestone Page---------------------------------*/
 

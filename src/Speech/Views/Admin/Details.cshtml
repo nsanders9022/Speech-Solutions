@@ -73,14 +73,15 @@
                                 <div id="completed-goal-@goal.GoalId">
 
                                     <h4>
-                                        This goal has not been met yet.
+                                        <span class="not-met">Not met.</span>
+                                        <br />
                                         <button class="complete" id="@goal.GoalId">Mark this goal as met</button>
                                     </h4>
                                 </div>
                             }
                             else
                             {
-                                <h4>This goal has been met.</h4>
+                                <h4 class="met">Met.</h4>
 
                             }
                         </div>
