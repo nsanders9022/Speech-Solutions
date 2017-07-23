@@ -60,6 +60,10 @@ body {
     height: auto;
 }
 
+.skype-button {
+    z-index: 10;
+}
+
 /*---------------------------------Navigation bar---------------------------------*/
 
 .navbar-toggle {
@@ -102,15 +106,16 @@ body {
 /*---------------------------------Buttons---------------------------------*/
 
 .btn a {
-    color: white;
+    color: black;
     font-size: 16px;
 }
 
 .btn {
-    background-color: #a69afe;
+    border: 2px solid #a69afe;
+    background-color: white;
     margin: 30px 0px;
     /*border: 2px inset gray;*/
-    color:white;
+    color: black;
 }
 
 .btn:hover {
@@ -174,19 +179,19 @@ h3 {
     right: 0;
 }
 
-.bubble h4 {
+.speech-bubble h4 {
     font-size: 24px;
     font-weight: bold;
     color: #2f2989;
 }
 
-.bubble p {
+.speech-bubble p {
     font-size: 16px;
     text-overflow: ellipsis;
     font-style: italic;
 }
 
-.bubble {
+.speech-bubble {
     position: relative;
     width: 375px;
     height: 275px;
@@ -199,7 +204,7 @@ h3 {
     border: #bee4e7 solid 6px;
 }
 
-.bubble:after {
+.speech-bubble:after {
     content: '';
     position: absolute;
     border-style: solid;
@@ -213,7 +218,7 @@ h3 {
     left: 14%;
 }
 
-.bubble:before {
+.speech-bubble:before {
     content: '';
     position: absolute;
     border-style: solid;
@@ -353,6 +358,10 @@ h3 {
   cursor: pointer;
 }
 
+
+.about-process {
+    height: 50px;
+}
 
 /*---------------------------------Review Page---------------------------------*/
 

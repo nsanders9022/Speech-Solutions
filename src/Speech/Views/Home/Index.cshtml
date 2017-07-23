@@ -67,7 +67,7 @@
     <div class="reviews row">
         @for( int i = 0; i < 3; i++)
         {
-            <div class="bubble col-xs-4">
+            <div class="speech-bubble col-xs-4">
                 <h4>@Model[i].Name</h4>
                 <p><span class="quotes">&#10077;</span>@Model[i].Description</p> 
             </div>
@@ -79,7 +79,12 @@
                     {
                 <button type="submit" class="btn">@Html.ActionLink("Add a review", "Create", "Review")</button>
             }
-            <button type="submit" class="btn home-button">@Html.ActionLink("See all Reviews", "Index", "Review")</button>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <button type="submit" class="btn home-button">@Html.ActionLink("See all Reviews", "Index", "Review")</button>
+
+            </div>
+            <div class="col-sm-4"></div>
         </div>
 
 
@@ -116,7 +121,7 @@
             <h3>Evaluation</h3>
             <h4>The child and therapist will perform the evaluation online.</h4>
             <h4>Evaluations last 2-3 hours.</h4>
-            <h4>An adult is recommended to be nearby incase of ny technical difficulties.</h4>
+            <h4>An adult is recommended to be nearby incase of any technical difficulties.</h4>
         </div>
         <div class="recommendations step">
             <h3>Recommendations</h3>
@@ -128,7 +133,7 @@
             <h3>Therapy begins</h3>
             <h4>Sessions will take place for the duration and frequency that is best for the child and for your schedule.</h4>
             <h4>Most sessions last for 1 hour.</h4>
-            <h4>An adult is recommended to be nearby incase of ny technical difficulties.</h4>
+            <h4>An adult is recommended to be nearby incase of any technical difficulties.</h4>
 
          </div>
     </div>
