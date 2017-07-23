@@ -4,7 +4,6 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Speech Solutions</title>
-    <script src="https://latest-swc.cdn.skype.com/sdk/v1/sdk.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="js/bootstrap-carousel.js"></script>
@@ -44,13 +43,16 @@
                                 <li>@Html.ActionLink("Helpful Resources", "Resources", "Resources")</li>
                             </ul>
                         </li>
-                        <li class="dropdown">
+                        <li class="nav-link">
+                            @Html.ActionLink("Schedule Consultation", "Schedule", "Home")
+                        </li>
+                        @*<li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Sessions<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li>@Html.ActionLink("Schedule Consultation", "Schedule", "Home")</li>
                                 <li>@Html.ActionLink("Video Session", "Video", "Home")</li>
                             </ul>
-                        </li>
+                        </li>*@
                     </ul>
                     
                     <ul class="nav navbar-nav navbar-right">
@@ -93,12 +95,13 @@
         <div class="body-div">
             @RenderBody()
             <div id="footer">
-                <span class="skype-button bubble" data-contact-id="nicky9022"></span>
+                
                 <div class="row">
                     <div class="col-sm-2"></div>
                     <div class="col-sm-3">
                         <p class="footer-heading">Contact Us</p>
                         <hr />
+            <span class="skype-button bubble" data-contact-id="nicky9022"></span>
                         <p><img class="icon" src="~/images/contact.png" />@Html.ActionLink("Contact Us Page", "Contact", "About")</p>
                         <p><img class="icon" src="~/images/phone.png" />1-800-666-5555</p>
                         <p><img class="icon" src="~/images/email.png" />SpeechSolutions2@gmail.com</p>

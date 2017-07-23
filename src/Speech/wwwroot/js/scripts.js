@@ -64,26 +64,26 @@
     })
 
 
-    //scroll down to section of page
-    $("#company").click(function () {
-        $('html,body').animate({
-            scrollTop: $(".company").offset().top
-        }, 'slow');
-    });
-    $("#therapist").click(function () {
-        $('html,body').animate({
-            scrollTop: $(".therapist").offset().top
-        }, 'slow');
-    });
-    $("#teletherapy").click(function () {
-        $('html,body').animate({
-            scrollTop: $(".teletherapy").offset().top
-        }, 'slow');
-    });
-        //up arrow
-    $(".up-arrow").click(function () {
-        $("html, body").animate({ scrollTop: 0 }, "slow");
-    });
+    ////scroll down to section of page
+    //$("#company").click(function () {
+    //    $('html,body').animate({
+    //        scrollTop: $(".company").offset().top
+    //    }, 'slow');
+    //});
+    //$("#therapist").click(function () {
+    //    $('html,body').animate({
+    //        scrollTop: $(".therapist").offset().top
+    //    }, 'slow');
+    //});
+    //$("#teletherapy").click(function () {
+    //    $('html,body').animate({
+    //        scrollTop: $(".teletherapy").offset().top
+    //    }, 'slow');
+    //});
+    //    //up arrow
+    //$(".up-arrow").click(function () {
+    //    $("html, body").animate({ scrollTop: 0 }, "slow");
+    //});
 
 
     //Displays result of marking a goal as met
