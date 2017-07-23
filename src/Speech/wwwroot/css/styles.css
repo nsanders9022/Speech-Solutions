@@ -308,31 +308,31 @@ h3 {
     margin-top: 10px;
 }
 
-.about-square {
-    height: 200px;
+/*.about-square {
+    height: 100px;
     margin: 0.5%;
     width: 32%;
-    border: 6px solid #bee4e7;
+    border: 3px solid #bee4e7;
     text-align: center;
-    padding-top: 70px;
-    background-color: #e5e6e8;
+    background-color: white;
 }
 
 .scroll-links {
-    font-size: 25px;
+    font-size: 20px;
     color: #2f2989;
     font-weight: bold;
     list-style: none;
+    padding-top: 15%;
 }
 
 .about-square:hover {
     cursor: pointer;
-    border: 10px solid #bee4e7;
+    border: 5px solid #bee4e7;
 }
 
 .abouts {
     margin-left: 0.5%;
-}
+}*/
 
 #dayna {
     float: right;
@@ -347,16 +347,16 @@ h3 {
 }
 
 .scroll-section {
-    height: 500px;
+    height: auto;
     width: 100%;
     padding-top: 40px;
 }
 
-.up-arrow {
+/*.up-arrow {
   height: 30px;
   float: right;
   cursor: pointer;
-}
+}*/
 
 
 .about-process {
