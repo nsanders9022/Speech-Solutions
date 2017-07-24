@@ -119,7 +119,7 @@ body {
 }
 
 .btn:hover {
-    color:white;
+    color:black;
     text-decoration: underline;
 }
 
@@ -343,13 +343,13 @@ h3 {
 
 .about-p {
     text-align: justify;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .scroll-section {
     height: auto;
     width: 100%;
-    padding-top: 40px;
+
 }
 
 /*.up-arrow {
@@ -361,6 +361,10 @@ h3 {
 
 .about-process {
     height: 50px;
+}
+
+.margin {
+    margin: 0px 40px;
 }
 
 /*---------------------------------Review Page---------------------------------*/

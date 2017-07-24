@@ -74,19 +74,26 @@
         }
         <br />
     </div>
-        <div class="reviews row">
-            @if (User.Identity.IsAuthenticated && !User.IsInRole("Admin"))
-                    {
+    <div class="reviews row">
+        @if (User.Identity.IsAuthenticated && !User.IsInRole("Admin"))
+        {
+            <div class="col-sm-3"></div>
+            <div class="col-sm-4">
+                <button type="submit" class="btn home-button">@Html.ActionLink("See all Reviews", "Index", "Review")</button>
                 <button type="submit" class="btn">@Html.ActionLink("Add a review", "Create", "Review")</button>
-            }
+            </div>
+            <div class="col-sm-4">
+            </div>
+        }
+        else
+        {
             <div class="col-sm-4"></div>
             <div class="col-sm-4">
                 <button type="submit" class="btn home-button">@Html.ActionLink("See all Reviews", "Index", "Review")</button>
-
             </div>
             <div class="col-sm-4"></div>
-        </div>
-
+        }
+    </div>
 
     <div class="process container">
         <h1>Process</h1>
