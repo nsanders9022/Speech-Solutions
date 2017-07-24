@@ -42,7 +42,7 @@ namespace Speech.Controllers
             var emailMessage = new MimeMessage();
 
             emailMessage.From.Add(new MailboxAddress(c.FirstName, c.Email));
-            emailMessage.To.Add(new MailboxAddress("Nicole Sanders", "speechsolutions2@gmail.com"));
+            emailMessage.To.Add(new MailboxAddress("Nicole Sanders", EnvironmentVariables.email));
             emailMessage.Subject = "Contact Form Submission";
             emailMessage.Body = new TextPart("html")
             {
@@ -55,7 +55,7 @@ namespace Speech.Controllers
             using (var client = new SmtpClient())
             {
                 client.Connect("smtp.gmail.com", 465, SecureSocketOptions.SslOnConnect);
-                client.Authenticate("speechsolutions2@gmail.com", "CannonBeach2017@");
+                client.Authenticate(EnvironmentVariables.email, EnvironmentVariables.password);
                 await client.SendAsync(emailMessage).ConfigureAwait(false);
                 await client.DisconnectAsync(true).ConfigureAwait(false);
             };
