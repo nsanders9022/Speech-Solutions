@@ -36,7 +36,7 @@ namespace Speech.Controllers
             note.Date = DateTime.Now.ToLocalTime();
             _db.Notes.Add(note);
             _db.SaveChanges();
-            return RedirectToAction("Clients");
+            return RedirectToAction("Clients", "Admin");
         }
     }
 }
