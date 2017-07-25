@@ -75,5 +75,19 @@ namespace Speech.Controllers
             _db.SaveChanges();
             return RedirectToAction("Clients");
         }
+
+        public IActionResult EditGoal(int id)
+        {
+            var thisGoal = _db.Goals.FirstOrDefault(goals => goals.GoalId == id);
+            return View(thisGoal);
+        }
+
+        [HttpPost]
+        public IActionResult EditGoal(Goal goal)
+        {
+            _db.Entry(goal).State = EntityState.Modified;
+            _db.SaveChanges();
+            return RedirectToAction("Clients");
+        }
     }
 }

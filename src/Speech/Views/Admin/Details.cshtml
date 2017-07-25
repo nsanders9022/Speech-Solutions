@@ -66,6 +66,7 @@
                     <div class="row">
                         <div class="col-sm-9">
                             <h4>@goal.Description</h4>
+                            <p>@Html.ActionLink("Edit", "EditGoal", new { id = goal.GoalId, profileId = goal.ProfileId })</p>
                         </div>
                         <div class="col-sm-3">
                             @if (goal.Completed == false)
