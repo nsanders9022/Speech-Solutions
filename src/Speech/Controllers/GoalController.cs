@@ -64,7 +64,19 @@ namespace Speech.Controllers
             return RedirectToAction("Clients","Admin");
         }
 
+        public IActionResult Delete(int id)
+        {
+            var thisGoal = _db.Goals.FirstOrDefault(goals => goals.GoalId == id);
+            return View(thisGoal);
+        }
 
-
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var thisGoal = _db.Goals.FirstOrDefault(goals => goals.GoalId == id);
+            _db.Goals.Remove(thisGoal);
+            _db.SaveChanges();
+            return RedirectToAction("Clients", "Admin");
+        }
     }
 }
