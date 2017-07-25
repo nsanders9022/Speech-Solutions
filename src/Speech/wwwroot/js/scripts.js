@@ -63,35 +63,12 @@
         $("div.sessions").show();
     })
 
-
-    ////scroll down to section of page
-    //$("#company").click(function () {
-    //    $('html,body').animate({
-    //        scrollTop: $(".company").offset().top
-    //    }, 'slow');
-    //});
-    //$("#therapist").click(function () {
-    //    $('html,body').animate({
-    //        scrollTop: $(".therapist").offset().top
-    //    }, 'slow');
-    //});
-    //$("#teletherapy").click(function () {
-    //    $('html,body').animate({
-    //        scrollTop: $(".teletherapy").offset().top
-    //    }, 'slow');
-    //});
-    //    //up arrow
-    //$(".up-arrow").click(function () {
-    //    $("html, body").animate({ scrollTop: 0 }, "slow");
-    //});
-
-
     //Displays result of marking a goal as met
     $('.complete').click(function () {
         var route = '#completed-goal-' + this.id;
         $.ajax({
             type: 'GET',
-            url: '../Complete/' + this.id,
+            url: '../../Goal/Complete/' + this.id,
             success: function (result) {
                 $(route).html(result);
             }

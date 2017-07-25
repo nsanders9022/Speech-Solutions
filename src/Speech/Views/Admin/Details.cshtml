@@ -66,7 +66,7 @@
                     <div class="row">
                         <div class="col-sm-9">
                             <h4>@goal.Description</h4>
-                            <p>@Html.ActionLink("Edit", "EditGoal", new { id = goal.GoalId, profileId = goal.ProfileId })</p>
+                            <p>@Html.ActionLink("Edit", "Edit", "Goal", new { id = goal.GoalId, profileId = goal.ProfileId })</p>
                         </div>
                         <div class="col-sm-3">
                             @if (goal.Completed == false)
@@ -138,7 +138,7 @@
 
     <br />
     <h4>@Html.ActionLink("Back to client list", "Clients", "Admin")</h4>
-    <h4>@Html.ActionLink("Create a goal", "Create", "Admin")</h4>
-    <h4>@Html.ActionLink("Write a note for a client", "CreateNote", "Admin")</h4>
+    <h4>@Html.ActionLink("Create a goal", "Create", "Goal")</h4>
+    <h4>@Html.ActionLink("Write a note for a client", "Create", "Note")</h4>
 
 </div>
