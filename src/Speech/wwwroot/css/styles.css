@@ -308,32 +308,6 @@ h3 {
     margin-top: 10px;
 }
 
-/*.about-square {
-    height: 100px;
-    margin: 0.5%;
-    width: 32%;
-    border: 3px solid #bee4e7;
-    text-align: center;
-    background-color: white;
-}
-
-.scroll-links {
-    font-size: 20px;
-    color: #2f2989;
-    font-weight: bold;
-    list-style: none;
-    padding-top: 15%;
-}
-
-.about-square:hover {
-    cursor: pointer;
-    border: 5px solid #bee4e7;
-}
-
-.abouts {
-    margin-left: 0.5%;
-}*/
-
 #dayna {
     float: right;
     margin: 0 0 10px 20px;
@@ -356,15 +330,7 @@ h3 {
 .scroll-section {
     height: auto;
     width: 100%;
-
 }
-
-/*.up-arrow {
-  height: 30px;
-  float: right;
-  cursor: pointer;
-}*/
-
 
 .about-process {
     height: 50px;
@@ -417,6 +383,7 @@ dark blu #2f2989*/
 .resources a {
     display: block;
     padding-bottom: 15px;
+    font-size: 18px;
 }
 
 
@@ -469,6 +436,10 @@ dark blu #2f2989*/
 
 
 /*---------------------------------Milestone Page---------------------------------*/
+
+.text-muted {
+    font-size: 18px;
+}
 
 .timeline {
     position: relative;
@@ -572,16 +543,8 @@ dark blu #2f2989*/
     margin-bottom: 4px;
     padding:0;
     color: #74c0cd;
-    font-size: 24px;
+    font-size: 28px;
 }
-
-/*.timeline .timeline-heading h4.subheading {
-  margin:0;
-  padding:0;
-    text-transform: none;
-    font-size:18px;
-    color:#333333;
-}*/
 
 .timeline .timeline-body>p,
 .timeline .timeline-body>ul {
@@ -723,4 +686,3 @@ dark blu #2f2989*/
     display: none;
   }
 }
-

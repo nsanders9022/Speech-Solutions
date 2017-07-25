@@ -21,7 +21,7 @@
         $("#myCarousel").carousel("next");
     });
 
-    // Show process text when hover over image
+    // Show process text when click an image
     $("img#schedule-img").click(function () {
         $("div.consultation").hide();
         $("div.evaluation").hide();
