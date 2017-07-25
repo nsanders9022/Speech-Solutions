@@ -48,6 +48,7 @@ namespace Speech.Controllers
         [HttpPost]
         public IActionResult Edit(Note note)
         {
+            note.Date = DateTime.Now.ToLocalTime();
             _db.Entry(note).State = EntityState.Modified;
             _db.SaveChanges();
             return RedirectToAction("Clients", "Admin");

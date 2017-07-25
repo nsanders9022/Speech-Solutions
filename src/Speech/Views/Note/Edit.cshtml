@@ -16,7 +16,7 @@
         @Html.HiddenFor(model => model.ProfileId);
 
         @Html.LabelFor(model => model.Description)
-        @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.TextAreaFor(model => model.Description, new { @class = "form-control"})
 
         <input type="submit" value="Save" class="btn" />
     }
