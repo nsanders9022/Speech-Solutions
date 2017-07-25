@@ -38,5 +38,34 @@ namespace Speech.Controllers
             _db.SaveChanges();
             return RedirectToAction("Clients", "Admin");
         }
+
+        public IActionResult Edit(int id)
+        {
+            var thisNote = _db.Notes.FirstOrDefault(notes => notes.NoteId == id);
+            return View(thisNote);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Note note)
+        {
+            _db.Entry(note).State = EntityState.Modified;
+            _db.SaveChanges();
+            return RedirectToAction("Clients", "Admin");
+        }
+
+        public IActionResult Delete(int id)
+        {
+            var thisNote = _db.Notes.FirstOrDefault(notes => notes.NoteId == id);
+            return View(thisNote);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var thisNote = _db.Notes.FirstOrDefault(notes => notes.NoteId == id);
+            _db.Notes.Remove(thisNote);
+            _db.SaveChanges();
+            return RedirectToAction("Clients", "Admin");
+        }
     }
 }
