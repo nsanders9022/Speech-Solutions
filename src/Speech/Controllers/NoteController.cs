@@ -24,18 +24,22 @@ namespace Speech.Controllers
         }
 
 
-        public IActionResult Create()
+        public IActionResult Create(int id)
         {
             ViewBag.ProfileId = new SelectList(_db.Profiles, "ProfileId", "ClientFirst");
             return View();
         }
 
         [HttpPost]
-        public IActionResult Create(Note note)
+        public IActionResult Create(Note note, Profile profile)
         {
             note.Date = DateTime.Now.ToLocalTime();
             _db.Notes.Add(note);
             _db.SaveChanges();
+
+            //profile.ClientFirst = _db.Profiles.ClientFirst.Where(p => p.ProfileId == note.ProfileId);
+
+            Console.WriteLine("!!!!!!!!!!!!" + profile);
             return RedirectToAction("Clients", "Admin");
         }
 
