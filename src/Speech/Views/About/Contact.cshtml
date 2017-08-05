@@ -13,25 +13,26 @@
         <div class="row">
             @Html.LabelFor(model=>model.FirstName, "First Name:")
             @Html.ValidationMessageFor(model => model.FirstName, null, new {@class="validation"})
-            @Html.EditorFor(model=>model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.EditorFor(model=>model.FirstName, new { htmlAttributes = new { @class = "form-control", required = "required" } })
         </div>
         @Html.ValidationSummary(true)
         <div class="row">
             @Html.LabelFor(model => model.LastName, "Last Name:")
             @Html.ValidationMessageFor(model => model.LastName, null, new { @class = "validation" })
-            @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+            @Html.ValidationMessageFor(m => m.Email, null, new { @class = "text-danger" })
          </div>
         @Html.ValidationSummary(true)
         <div class="row">
             @Html.LabelFor(model => model.Email, "Email:")
             @Html.ValidationMessageFor(model => model.Email, null, new { @class = "validation" })
-            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", type = "email", required = "required" } })
         </div>
         @Html.ValidationSummary(true)
         <div class="row">
             @Html.LabelFor(model => model.Comment, "Comments:")
             @Html.ValidationMessageFor(model => model.Comment, null, new { @class = "validation" })
-            @Html.TextAreaFor(model => model.Comment, new { @class = "form-control" })
+            @Html.TextAreaFor(model => model.Comment, new { @class = "form-control", required = "required" })
         </div>
 
         <div class="row">

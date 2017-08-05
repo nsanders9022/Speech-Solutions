@@ -23,6 +23,8 @@ namespace Speech.Models
         public string LastName { get; set; }
 
         [Required(ErrorMessage = "*An email address is requried")]
+        [EmailAddress(ErrorMessage = "Invalid email address. Valid e-mail can contain only latin letters, numbers, '@' and '.'")]
+        [Display(Name = "Email")]
         public string Email { get; set; }
 
         [Required(ErrorMessage = "*A comment is requried")]
