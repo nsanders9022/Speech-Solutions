@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.Text.RegularExpressions;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Speech.ViewModels
 {
@@ -12,9 +14,11 @@ namespace Speech.ViewModels
         [Display(Name = "User Name")]
         public string UserName { get; set; }
 
-        [Required]
-        [EmailAddress]
+        //[Required]
+        [Required(ErrorMessage = "Please enter email.")]
+        [EmailAddress(ErrorMessage = "Invalid email address. Valid e-mail can contain only latin letters, numbers, '@' and '.'")]
         [Display(Name = "Email")]
+        [Remote(action: "VerifyEmail", controller: "Users")]
         public string Email { get; set; }
 
         [Required]
