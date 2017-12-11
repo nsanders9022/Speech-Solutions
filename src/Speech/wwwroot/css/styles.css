@@ -62,6 +62,9 @@ body {
 
 .skype-button {
     z-index: 10;
+    position: fixed !important;
+    bottom: 10 !important;
+    right: 10 !important;
 }
 
 /*---------------------------------Navigation bar---------------------------------*/
